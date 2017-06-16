@@ -1,0 +1,184 @@
+@charset "UTF-8";
+
+.mainForm {
+    width: 320px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+.number {
+    font-size: 1.3rem;
+    margin-left: -5px;
+    margin-bottom: 30px;
+    width: 320px;
+    text-align: center;
+}
+.number a {
+    color: #515151;
+}
+.linkABlue:visited {
+    color: #00a7ea;
+}
+.linkAGray:hover {
+    color: #2b2b2b;
+}
+.number span {
+    color: #d9d9d9;
+    display: inline-block;
+    border: 1px solid #dadada;
+    height: 16px;
+    line-height: 20px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+.normalInput {
+    float: left;
+    position: relative;
+    display: inline-block;
+    padding: 0 10px;
+    width: 320px;
+    height: 50px;
+    line-height: 22px;
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    border: 1px solid #dadada;
+    outline: none;
+    color: #474747;
+    overflow: visible;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+.submitButton{
+    margin: 0 auto;
+    vertical-align: middle;
+}
+.error {
+    display: none;
+    margin-left: 0;
+    margin-bottom: 20px;
+    color: #ff6600;
+    float: left;
+}
+.right {
+    display: none;
+    margin-left: 0;
+    margin-bottom: 20px;
+    color: #71b83d;
+    float: left;
+}
+
+.normalInput input {
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    font-size: 1.3rem;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+.errorC {
+    margin-bottom: 10px;
+    border-color: #ff6600;
+    color: #ff6600;
+}
+.checkedN {
+    border: 1px solid #1ece6d;
+    color: #333333;
+}
+.Validform_checktip {
+    margin-left: 8px;
+    line-height: 20px;
+    height: 20px;
+    overflow: hidden;
+    color: #999;
+    font-size: 12px;
+}
+.Validform_right {
+    color: #71b83d;
+    padding-left: 20px;
+    background: url("../images/valid_icons.png") no-repeat -20px 0;
+}
+.Validform_wrong {
+    color: red;
+    padding-left: 20px;
+    white-space: nowrap;
+    background: url("../images/valid_icons.png") no-repeat 0 -20px;
+}
+.fullBtnBlue {
+    display: inline-block;
+    height: 50px;
+    width: 320px;
+    font-size: 1.5rem;
+    line-height: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+    outline: none;
+    cursor: pointer;
+    background-color: #32a5e7;
+    color: #fff;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+a:hover.fullBtnBlue,
+a:visited.fullBtnBlue{
+    background-color: #32a5e7;
+    color: #fff;
+    text-decoration: none;
+}
+.phone01{
+    display: none;
+}
+
+@media (max-width: 768px){
+    .mainForm {
+        width: 90%;
+        margin: 20px auto;
+    }
+    .number {
+        font-size: 1.3rem;
+        margin-left: -5px;
+        margin-bottom: 20px;
+        width: 100%;
+        text-align: center;
+    }
+    .normalInput {
+        width: 100%;
+    }
+    .fullBtnBlue {
+        width: 100%;
+    }
+    .normalInput {
+        height: 38px;
+        line-height: 22px;
+        margin-bottom: 20px;
+    }
+    .error {
+        margin-bottom: 10px;
+    }
+    .normalInput input {
+        width: 100%;
+        height: 36px;
+        line-height: 36px;
+    }
+    .fullBtnBlue {
+        height: 38px;
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

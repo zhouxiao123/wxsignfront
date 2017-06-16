@@ -1,0 +1,767 @@
+@charset "UTF-8";
+/* 禁用iPhone中Safari的字号自动调整 */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    font-size:60.5%; /* 10px*/
+}
+/* 去除iPhone中默认的input样式 */
+input{/* -webkit-appearance:none; */ resize: none;}
+/* 去除数字input中的上下箭头 */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+input,select,textarea{outline:none;border:none;background-color:transparent;}
+/* 取消链接高亮  */
+body,div,ul,li,ol,h1,h2,h3,h4,h5,h6,input,textarea,select,p,dl,dt,dd,a,img,button,form,table,th,tr,td,tbody,article,
+aside, details,figcaption,figure,footer,header,hgroup, menu,nav,section{ -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+    font-family:"Microsoft YaHei","Tahoma","Arial","Roboto","Droid Sans","Helvetica Neue","Droid Sans Fallback","Heiti SC","sans-self";
+    list-style:none;
+    /*-webkit-appearance:none;*/
+    outline:none;}
+/* 设置HTML5元素为块 */
+article, aside, details,figcaption,figure,footer,header,hgroup, menu,nav,section {
+    display: block;
+}
+/* 图片自适应 */
+img {
+    max-width: 100%;
+    height: auto;
+    width:auto\9; /* ie8 */
+    -ms-interpolation-mode:bicubic;/*为了照顾ie图片缩放失真*/
+}
+*:focus {
+    outline:none;
+}
+/* 清零 */
+body,html,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,
+img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,
+tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,
+output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;}
+
+.clearFix:after{content:""; display:block; visibility:hidden; height:0; clear:both;}
+.clearFix{zoom:1;}
+a{text-decoration:none; }
+a:hover{text-decoration:none;}
+ul,ol,li{list-style:none;}
+
+fieldset,img{border: none;}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+caption, th {
+    text-align:left;
+}
+
+input:password {
+    ime-mode:disabled;
+}
+*{box-sizing:border-box;}
+.line1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: box;
+    display: -webkit-box;
+    line-clamp: 1;
+    box-orient: vertical;
+    -webkit-line-clamp: 1;
+    -moz-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.line2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: box;
+    display: -webkit-box;
+    line-clamp: 2;
+    box-orient: vertical;
+    -webkit-line-clamp: 2;
+    -moz-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.line3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: box;
+    display: -webkit-box;
+    line-clamp: 3;
+    box-orient: vertical;
+    -webkit-line-clamp: 3;
+    -moz-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.line2{
+    height:45px;
+}
+.line3{
+    height:62px;
+}
+@-moz-document url-prefix(){
+    .line2{
+        height:37.8px;
+    }
+    .line3{
+        height:51.4px;
+    }
+    
+}
+.line5 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: box;
+    display: -webkit-box;
+    line-clamp: 2;
+    box-orient: vertical;
+    -webkit-line-clamp: 5;
+    -moz-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+@font-face {
+    font-family: "msyi"; /*这里是说明调用来的字体名字*/
+    src: url('style/msyi.ttf'); /*这里是字体文件路径*/
+}
+
+/*公用样式*/
+body{
+    background: #fff;
+}
+.comBg{
+    background: #f9f9f9;
+    width:100%;
+    height:100%;
+}
+/*logo及导航*/
+.commonWrap{
+    width:100%;
+    background: #fff;
+}
+.logoBox{
+    width:35%;
+    height:100px;
+    float: left;
+}
+.logoBox >img{
+    width:260px;
+    height:68px;
+    margin-top:16px;
+}
+.navBox{
+    width:64%;
+    float: right;
+}
+.navBox >ul{
+    width:100%;
+    height:40px;
+    margin-top: 30px;
+}
+.navBox >ul >li{
+    width:14%;
+    float: left;
+    text-align: center;
+}
+.navBox >ul >li >a{
+    font-size: 16px;
+    line-height: 36px;
+    color:#666;
+    padding: 5px 8px;
+}
+.navBox >ul >li >a.liActive01{
+    color:#fff;
+    background: #ff5730;
+    border-radius: 5px;
+}
+.navBox >ul >li >a:hover{
+    color:#fff;
+    background: #ff5730;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.mobNav{
+    display: none;
+    width:10%;
+    height:100px;
+    float: right;
+    position: relative;
+}
+.menuBtn{
+    width:100%;
+    height:100%;
+    background: url("../images/menu01.png") no-repeat center;
+    background-size: 50% auto;
+}
+.mobMenu{
+    display: none;
+    width:260%;
+    position: absolute;
+    top:100%;
+    right:0;
+    text-align: center;
+    background: #fff;
+    border:1px solid #e1e1e1;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    z-index: 1111;
+}
+.mobMenu ul li{
+    width:100%;
+    height:36px;
+    margin:10px 0;
+}
+.mobMenu ul li a{
+    display: block;
+    height:36px;
+    width:80%;
+    margin: 0 10%;
+    line-height: 36px;
+    font-size: 1.6rem;
+    color:#333;
+    border-radius: 12px/12px;
+}
+.mobMenu ul li a:hover{
+    text-decoration: none;
+}
+.mobMenu ul li a.on{
+    color:#fff;
+    background: #5db442;
+}
+
+/*banner*/
+.bannerBox{
+    width:100%;
+    max-height:650px;
+}
+.owl-carousel .owl-wrapper:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+/* display none until init */
+.owl-carousel{
+    display: none;
+    position: relative;
+    width:100%;
+
+}
+.owl-carousel .owl-wrapper{
+    display: none;
+    position: relative;
+}
+.owl-carousel .owl-wrapper-outer{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.owl-carousel .owl-wrapper-outer.autoHeight{
+    -webkit-transition: height 500ms ease-in-out;
+    -moz-transition: height 500ms ease-in-out;
+    -ms-transition: height 500ms ease-in-out;
+    -o-transition: height 500ms ease-in-out;
+    transition: height 500ms ease-in-out;
+}
+
+.owl-carousel .owl-item{
+    float: left;
+}
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div{
+    cursor: pointer;
+}
+/*样式*/
+.owl-demo {
+    position:relative;
+    width:100%;
+    height:auto;
+}
+.owl-demo .item{
+    position:relative;
+    display:block;
+    width:100%;
+}
+.owl-demo img{
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+.owl-pagination{
+    position:absolute;
+    left:0;
+    bottom:2%;
+    width:100%;
+    height:22px;
+    text-align:center;
+}
+.owl-page{
+    display:inline-block;
+    width:8px;
+    height:8px;
+    margin:0 5px;
+    background: #fff;
+    border-radius:50%;
+}
+.owl-pagination .active{
+    background: #006337;
+}
+.owl-buttons{
+    display:none;
+    width:80%;
+    margin: 0 auto;
+}
+.owl-buttons div{
+    position:absolute;
+    top:50%;
+    width:40px;
+    height:80px;
+    margin-top:-40px;
+    text-indent:-9999px;
+}
+.owl-prev{
+    left:2%;
+    background:url(../images/bg19.png) no-repeat center;
+    background-size: 100% auto;
+}
+.owl-next{
+    right:2%;
+    background:url(../images/bg20.png) no-repeat center;
+    background-size: 100% auto;
+}
+.owl-prev:hover{
+    background:url(../images/bg17.png) no-repeat center;
+    background-size: 100% auto;
+}
+.owl-next:hover{
+    background:url(../images/bg18.png) no-repeat center;
+    background-size: 100% auto;
+}
+.bannerShow{
+    width:100%;
+    position: relative;
+}
+.bannerShow span{
+    position:absolute;
+    bottom:10%;
+    right:25%;
+    color:#fff;
+    font-size: 1.8rem;
+    padding:10px 15px;
+    display: block;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background: #fd6147;
+    text-align: center;
+    z-index: 11;
+    cursor: pointer;
+}
+
+/*footer*/
+.footer{
+    width:100%;
+    margin-top: 30px;
+    background: #404040;
+    padding:50px 0;
+}
+.zxLogo{
+    width:35%;
+    float: left;
+    text-align: center;
+}
+.zxLogo img{
+    width:200px;
+}
+.zxLogo p{
+    font-size: 1.3rem;
+    color:#fff;
+    padding:8px 0 0;
+}
+.zxLogo span{
+    font-size: 1.2rem;
+    color:#f5f5f5;
+    padding:0 8px;
+    border-right:1px solid #ccc;
+}
+.zxLogo span:last-child{
+    border-right:none;
+}
+.tanTalk{
+    width:65%;
+    float: right;
+}
+.weChar{
+    width:35%;
+    float: left;
+    text-align: right;
+    margin-bottom: 0;
+}
+.weChar img{
+    max-width: 120px;
+}
+
+.footCont{
+    width:65%;
+    float: left;
+    padding-left: 8%;
+    padding-top: 8px;
+}
+.footCont p{
+    color:#fff;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+}
+
+/*浮动菜单*/
+.floatMenu{
+    position:fixed;
+    top:25%;
+    left:1%;
+    display: none;
+    z-index: 111;
+}
+.menu{
+    width:54px;
+    height:auto;
+}
+.menu ul li{
+    width:54px;
+    height:50px;
+    margin-bottom: 2px;
+}
+.menu ul li a{
+    display: block;
+    width:54px;
+    height:50px;
+    color:#777;
+    font-size: 1.1rem;
+    text-align: center;
+    padding-top: 30px;
+    border:1px solid #eaeaea;
+}
+.menu ul li .li001{
+    background: #f3f3f3 url("../images/ic001.png") no-repeat center 5px;
+}
+.menu ul li .li002{
+    background: #f3f3f3 url("../images/ic002.png") no-repeat center 5px;
+}
+.menu ul li .li003{
+    background: #f3f3f3 url("../images/ic003.png") no-repeat center 5px;
+}
+.menu ul li .li004{
+    background: #f3f3f3 url("../images/ic004.png") no-repeat center 5px;
+}
+.menu ul li .li005{
+    background: #f3f3f3 url("../images/ic005.png") no-repeat center 5px;
+}
+.menu ul li .li006{
+    background: #f3f3f3 url("../images/ic006.png") no-repeat center 5px;
+}
+.menu ul li .li007{
+    background: #f3f3f3 url("../images/ic007.png") no-repeat center 5px;
+}
+.menu ul li a:hover{
+    color:#fef51b;
+    text-decoration: none;
+}
+.menu ul li:hover .li001{
+    background: #009966 url("../images/ic008.png") no-repeat center 5px;
+}
+.menu ul li:hover .li002{
+    background: #009966 url("../images/ic009.png") no-repeat center 5px;
+}
+.menu ul li:hover .li003{
+    background: #009966 url("../images/ic010.png") no-repeat center 5px;
+}
+.menu ul li:hover .li004{
+    background: #009966 url("../images/ic011.png") no-repeat center 5px;
+}
+.menu ul li:hover .li005{
+    background: #009966 url("../images/ic012.png") no-repeat center 5px;
+}
+.menu ul li:hover .li006{
+    background: #009966 url("../images/ic013.png") no-repeat center 5px;
+}
+.menu ul li:hover .li007{
+    background: #009966 url("../images/ic014.png") no-repeat center 5px;
+}
+
+/*online*/
+.online{
+    position: fixed;
+    top:30%;
+    right:1%;
+    width:140px;
+    height:48px;
+    z-index: 111;
+}
+.online a{
+    display: block;
+    width:100%;
+    height:100%;
+}
+.online img{
+    width:140px;
+    height:48px;
+}
+
+
+@media (min-width: 768px) and (max-width: 991px){
+    /*footer*/
+    .footer{
+        margin-top: 20px;
+        padding:30px 0;
+    }
+    .zxLogo{
+        width:30%;
+        float: left;
+        text-align: center;
+    }
+    .zxLogo img{
+        width:100px;
+        heihgt:100px;
+    }
+    .zxLogo p{
+        font-size: 1.3rem;
+        color:#fff;
+        padding:8px 0 0;
+    }
+    .tanTalk{
+        width:70%;
+        float: left;
+    }
+    .weChar{
+        width:35%;
+    }
+    .footCont{
+        width:65%;
+    }
+    .bannerShow span{
+        position:absolute;
+        bottom:8%;
+        right:20%;
+        font-size: 1.3rem;
+        padding:5px 10px;
+    }
+    .owl-prev{
+        background-size: 60% auto;
+    }
+    .owl-next{
+        background-size: 60% auto;
+    }
+    .owl-prev:hover{
+        background-size: 60% auto;
+    }
+    .owl-next:hover{
+        background-size: 60% auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .navBox {
+        display: none;
+    }
+    .logoBox {
+        width: 75%;
+        height:100px;
+    }
+    .mobNav{
+        display: block;
+    }
+
+}
+@media (min-width: 332px) and (max-width: 767px) {
+    .logoBox {
+        width: 75%;
+        height:76px;
+    }
+    .logoBox >img{
+        width:200px;
+        height:52px;
+        margin-top:11px;
+    }
+    .mobNav{
+        height:76px;
+    }
+    .mobMenu ul li a{
+        font-size: 1.3rem;
+    }
+    .bannerShow span{
+        position:absolute;
+        bottom:8%;
+        right:5%;
+        font-size: 1rem;
+        padding:5px 10px;
+    }
+    .owl-prev{
+        background-size: 40% auto;
+    }
+    .owl-next{
+        background-size: 40% auto;
+    }
+    .owl-prev:hover{
+        background-size: 40% auto;
+    }
+    .owl-next:hover{
+        background-size: 40% auto;
+    }
+    .owl-page{
+        width:5px;
+        height:5px;
+        margin:0 3px;
+    }
+    /*footer*/
+    .footer{
+        margin-top: 15px;
+        padding:20px 0;
+    }
+    .zxLogo{
+        width:100%;
+        text-align: center;
+    }
+    .zxLogo img{
+        width:120px;
+        margin:0 auto;
+    }
+    .zxLogo p{
+        font-size: 1.3rem;
+        color:#fff;
+        padding:10px 0 0 ;
+        float: left;
+        width:100%;
+    }
+    .tanTalk{
+        width:100%;
+        float: left;
+        padding:20px 0 0;
+    }
+    .weChar{
+        width:24%;
+        text-align: right;
+    }
+    .weChar img{
+        max-width: 80px;
+    }
+    .footCont{
+        width:76%;
+        margin: 0 auto;
+        padding-left: 4%;
+        padding-top: 0;
+    }
+    .footCont p{
+        font-size: 1rem;
+        line-height: 1.1rem;
+        text-align: left;
+    }
+}
+@media (max-width: 332px){
+    .logoBox {
+        width: 75%;
+        height:66px;
+    }
+    .logoBox >img{
+        width:170px;
+        height:44px;
+        margin-top:11px;
+    }
+    .mobNav{
+        height:66px;
+    }
+    .mobMenu ul li a{
+        font-size: 1.2rem;
+    }
+    .bannerShow span{
+        position:absolute;
+        bottom:8%;
+        right:5%;
+        font-size: 0.8rem;
+        padding:3px 5px;
+    }
+    .owl-page{
+        width:5px;
+        height:5px;
+        margin:0 3px;
+    }
+    .owl-prev{
+        background-size: 40% auto;
+    }
+    .owl-next{
+        background-size: 40% auto;
+    }
+    .owl-prev:hover{
+        background-size: 40% auto;
+    }
+    .owl-next:hover{
+        background-size: 40% auto;
+    }
+    /*footer*/
+    .footer{
+        margin-top: 15px;
+        padding:20px 0;
+    }
+    .zxLogo{
+        width:100%;
+        text-align: center;
+    }
+    .zxLogo img{
+        width:120px;
+        margin:0 auto;
+    }
+    .zxLogo p{
+        font-size: 1.3rem;
+        color:#fff;
+        padding:10px 0 0;
+        float: left;
+        width:100%;
+    }
+    .tanTalk{
+        width:100%;
+        float: left;
+        padding:20px 0 0;
+    }
+    .weChar{
+        width:24%;
+        text-align: right;
+    }
+    .weChar img{
+        max-width: 70px;
+    }
+    .footCont{
+        width:76%;
+        margin: 0 auto;
+        padding-left: 4%;
+        padding-top: 0;
+    }
+    .footCont p{
+        font-size: 1rem;
+        line-height: 1.1rem;
+        text-align: left;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1164 @@
+@charset "UTF-8";
+
+/*关于我们*/
+.comBanner{
+    width:100%;
+    height:280px;
+}
+.aboutBanner{
+    width:100%;
+    height:280px;
+    background: url("../images/about_img.jpg") no-repeat center;
+}
+.comBanner img{
+    width:100%;
+    max-height:280px;
+    overflow: hidden;
+}
+
+/*about content*/
+.aboutCon{
+    width:100%;
+    padding:30px;
+}
+.aboutCon h3{
+    font-size: 2.5rem;
+    line-height: 4rem;
+    text-align: center;
+    font-weight: normal;
+    color: #333;
+}
+.aboutCon h4{
+    font-size: 1.8rem;
+    line-height: 2rem;
+    text-align: center;
+    font-weight: normal;
+    color: #333;
+}
+.aboutTxt{
+    width:90%;
+    margin: 30px auto;
+}
+.aboutTxt p{
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    color: #666;
+    text-indent: 2em;
+}
+
+
+/*联系方式*/
+.contactImg{
+    width:100%;
+    max-height:280px;
+    border-top:1px solid #e5e5e5;
+}
+.contactImg .imgBox{
+    width:100%;
+    height:280px;
+    background: url("../images/contact_img.png") no-repeat top center;
+}
+.bgWit{
+    width:100%;
+    padding:20px 0;
+    background: #fff;
+}
+.contactBox{
+    width:50%;
+    margin: 20px auto;
+}
+.weXin{
+    width:30%;
+    border-right:1px dashed #ccc;
+    text-align: center;
+    float: left;
+}
+.weXin img{
+    width:100px;
+    height:100px;
+    text-align: center;
+}
+.weXin span{
+    display: block;
+    line-height: 2.5rem;
+    font-size: 1.4rem;
+    color:#999;
+}
+.contactTxt{
+    width:69%;
+    float: left;
+    padding-left: 5%;
+    padding-top: 10px;
+}
+.contactTxt p{
+    line-height: 2.5rem;
+    font-size: 1.4rem;
+    color:#666;
+}
+
+.ly{
+    width:90%;
+    margin: 0 auto;
+}
+.ly h3{
+    width:100%;
+    padding-top: 10px;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+}
+.ly h4{
+    width:100%;
+    padding-top: 10px;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    font-weight: normal;
+    color: #999;
+    text-align: center;
+}
+.inputBox{
+    width:100%;
+    padding:30px 0;
+}
+.inputMessage{
+    width:45%;
+    margin-right: 4%;
+    float: left;
+    margin-bottom: 20px;
+}
+.inputMessage input{
+    width:100%;
+    height:44px;
+    line-height: 44px;
+    border:1px solid #ccc;
+    background: #fff;
+    margin-bottom: 10px;
+    text-indent: 1rem;
+    color:#999;
+    font-size: 1.3rem;
+}
+.Validform_checktip {
+    margin-left: 8px;
+    line-height: 20px;
+    height: 20px;
+    overflow: hidden;
+    color: #999;
+    font-size: 12px;
+}
+.Validform_right {
+    color: #71b83d;
+    padding-left: 20px;
+    background: url("../images/valid_icons.png") no-repeat -20px 0;
+}
+.Validform_wrong {
+    color: red;
+    padding-left: 20px;
+    white-space: nowrap;
+    background: url("../images/valid_icons.png") no-repeat 0 -20px;
+}
+
+.textMessage{
+    width:94%;
+    margin-right: 4%;
+    margin-bottom: 20px;
+}
+.textMessage textarea{
+    width:100%;
+    border:1px solid #ccc;
+    background: #fff;
+    line-height: 44px;
+    color:#999;
+    font-size: 1.3rem;
+    padding: 3px 1rem;
+}
+
+/*最新资讯*/
+.title{
+    width:100%;
+    padding:15px;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color:#a8a8a8;
+}
+.title >a{
+    color:#a8a8a8;
+}
+.title >a:hover{
+    color:#a8a8a8;
+    text-decoration: none;
+}
+.title span{
+    color:#444;
+}
+.newsCenter{
+    width:100%;
+    height:auto;
+    padding-top: 20px;
+}
+.newsTitle{
+    width:100%;
+    height:46px;
+    border-bottom: 1px solid #ccc;
+}
+.newsTitle ul li{
+    width:120px;
+    height:46px;
+    float: left;
+    text-align: center;
+    font-size: 1.6rem;
+    color:#333;
+    line-height: 46px;
+    cursor:pointer;
+}
+.newsTitle ul li.liAc01{
+    color:#ff5730;
+    border-top:2px solid #ff5730;
+    border-left:1px solid #ccc;
+    border-right:1px solid #ccc;
+    border-bottom:1px solid #f9f9f9;
+}
+.inforBox{
+    width:90%;
+    margin: 0 auto;
+}
+.infor ul li{
+    width:100%;
+}
+.infor ul li a{
+    display: block;
+    width:100%;
+    padding:30px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+.infor ul li a:hover{
+    text-decoration: none;
+}
+.infor ul li a span{
+    display: block;
+}
+.span001{
+    width:80px;
+    height:80px;
+    float: left;
+    margin: 20px 5% 0 1%;
+    color:#888;
+    font-size: 4rem;
+    text-align: center;
+    line-height: 54px;
+    background: #ebebeb;
+}
+.infor ul li a:hover .span001{
+    background: #ff5730;
+    color:#fff;
+}
+.infor ul li a:hover .span001 em{
+    color:#ffe4e0;
+}
+.span001 em{
+    font-style: normal;
+    color:#9f9f9f;
+    font-size: 1.4rem;
+    line-height: 26px;
+    display: block;
+    text-align: center;
+}
+
+.span002{
+    width:85%;
+    float: left;
+}
+.span002 h3{
+    font-size: 2rem;
+    line-height: 3rem;
+    color:#333;
+}
+.span002 p{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color:#999;
+}
+/*课程回顾*/
+.kcBanner{
+    width:100%;
+    height:280px;
+    background: url("../images/kcBanner.jpg") no-repeat center;
+}
+/*资讯详情页*/
+.zxBanner{
+    width:100%;
+    height:280px;
+    background: url("../images/zxBanner.jpg") no-repeat center;
+}
+.zxCon{
+    width:90%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.zxCon h3{
+    font-size: 2.2rem;
+    line-height: 3rem;
+    color:#333;
+    text-align: center;
+    font-weight: normal;
+}
+.zxCon h4{
+    width:60%;
+    margin: 0 auto;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    color:#999;
+    text-align: center;
+    font-weight: normal;
+}
+.zxCon span{
+    display: inline-block;
+    width:50%;
+    text-align: center;
+}
+.zxTxt span,.zxTxt div span{
+    display: inline;
+    width:auto;
+    text-align: left;
+}
+.zxTxt tr,.zxTxt td,.zxTxt th{
+    border:1px solid #DDD;
+}
+.zxTxt{
+    width:100%;
+    padding:20px 0;
+}
+.zxTxt p{
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    color:#666;
+    text-indent: 2em;
+}
+.zxlink{
+    width:100%;
+    height:48px;
+    line-height: 48px;
+    background: #eee;
+    margin-top: 50px;
+}
+.zxlink ul li{
+    width:50%;
+    font-size: 1.4rem;
+    color:#666;
+    float: left;
+    text-indent: 1em;
+}
+.zxlink ul li a{
+    text-decoration: none;
+    color:#666;
+}
+.zxlink ul li a:hover{
+    color:#ff5730;
+}
+
+/*专家详情页*/
+.zjBanner{
+    width:100%;
+    height:280px;
+    background: url("../images/zjBanner.jpg") no-repeat center;
+}
+.zjCon{
+    width:100%;
+    padding-top: 30px;
+}
+.zjBox{
+    width:90%;
+    margin: 0 auto;
+}
+.jsImg{
+    max-width: 320px;
+    height:auto;
+    border:1px solid #ccc;
+    float: left;
+    text-align: right;
+    margin: 0 auto;
+    text-align: center;
+}
+.jsImg img{
+    width:100%;
+    height:auto;
+    margin: 0 auto;
+    text-align: center;
+}
+.intro{
+    width:60%;
+    float: left;
+    padding-left: 5%;
+}
+.intro h3{
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    color:#333;
+    font-weight: normal;
+}
+.intro p{
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color:#666;
+    font-weight: normal;
+    padding-top: 10px;
+}
+.introBox{
+    width:100%;
+    padding-top: 20px;
+}
+.introBox .introTitle{
+    width:100%;
+    height:46px;
+    border-bottom: 1px solid #ccc;
+}
+.introTitle h3{
+    width:120px;
+    height:46px;
+    border-top:2px solid #ff5730;
+    border-bottom: 1px solid #f9f9f9;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    font-size: 1.6rem;
+    line-height: 46px;
+    font-weight: normal;
+    text-align: center;
+    color:#333;
+}
+.introTxt{
+    width:90%;
+    margin: 0 auto;
+    padding: 20px 0 30px;
+}
+.introTxt p{
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    color:#666;
+    text-indent: 2em;
+}
+.introTxt .courseBox{
+    width:90%;
+    height:auto;
+    margin: 30px auto 0;
+}
+.courseBox img{
+    width:100%;
+    height:auto;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.expBox{
+    width:100%;
+    padding:30px 0;
+}
+.expInt{
+    max-width: 320px;
+    height:auto;
+    text-align: center;
+    margin: 0 auto 20px;
+}
+.expInt a{
+    display: block;
+    max-width: 320px;
+    height:auto;
+    border:1px solid #ccc;
+}
+.expInt:hover a{
+    border:1px solid #ff5730;
+    text-decoration: none;
+}
+.expImg{
+    max-width: 320px;
+    height:auto;
+    text-align: center;
+}
+.expImg img{
+    width:100%;
+    height:auto;
+}
+.expTxt{
+    width:94%;
+    margin: 30px auto;
+}
+.expTxt h3{
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    color:#333;
+    font-weight: normal;
+    text-align: left;
+    padding:0 1%;
+}
+.expTxt p{
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color:#666;
+    text-align: left;
+    padding:0 1%;
+}
+
+/*分页*/
+.page {
+    font-size: 1.3rem;
+    padding-bottom: 80px;
+    padding-top: 60px;
+    text-align: center;
+    color:#666;
+}
+.page > a {
+    cursor: pointer;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    margin-left: 5px;
+    color:#666;
+
+}
+.page > a:hover {
+    background-color: #ff5730;
+    color: #fff;
+    border: 1px solid #ff5730;
+    text-decoration: none;
+}
+.page > a.fy_h {
+    background: #ff5730;
+    color: #FFF;
+    border: 1px solid #ff5730;
+}
+.fy_e {
+    border: 1px solid #e6e7e8;
+    color: #585858;
+}
+.page > span {
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-left: 5px;
+
+}
+.page > span >a{
+    color:#666;
+}
+.page > span:hover {
+    background-color: #ff5730;
+    border: 1px solid #ff5730;
+    color:#fff;
+}
+.page > span:hover > a{
+    color: #fff;
+}
+
+
+@media (min-width: 992px) and (max-width: 1119px){
+    /*about content*/
+    .aboutCon h3{
+        font-size: 2.5rem;
+        line-height: 4rem;
+    }
+    .aboutCon h4{
+        font-size: 1.8rem;
+        line-height: 2rem;
+    }
+    .aboutTxt p{
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    /*about content*/
+    .aboutCon h3{
+        font-size: 2.2rem;
+        line-height: 3.5rem;
+    }
+    .aboutCon h4{
+        font-size: 1.7rem;
+        line-height: 2rem;
+    }
+    .aboutTxt p{
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
+    /*联系方式*/
+    .contactBox{
+        width:100%;
+    }
+    .contactTxt{
+        width:69%;
+        float: left;
+        padding-left: 5%;
+        padding-top: 10px;
+    }
+    .contactTxt p{
+        line-height: 2.5rem;
+        font-size: 1.3rem;
+    }
+
+    .ly{
+        width:90%;
+        margin: 0 auto;
+    }
+    .ly h3{
+        font-size: 2.2rem;
+        line-height: 2.8rem;
+    }
+    .ly h4{
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
+    .inputBox{
+        width:100%;
+        padding:20px 0;
+    }
+    .inputMessage{
+        width:94%;
+        float: none;
+        margin: 0 auto 20px;
+    }
+    .textMessage{
+        width:94%;
+        margin: 0 auto 20px;
+    }
+    /*最新资讯*/
+    .newsCenter{
+        width:100%;
+        height:auto;
+        padding-top: 10px;
+    }
+    .newsTitle ul li{
+        width:100px;
+        font-size: 1.5rem;
+    }
+    .infor ul li a{
+        padding:20px 0;
+    }
+    .span001{
+        margin: 10px 5% 0 1%;
+    }
+    /*资讯详情页*/
+    .zxCon{
+        padding: 15px 0;
+    }
+
+    .zxCon h3{
+        font-size: 2rem;
+        line-height: 2.8rem;
+    }
+    .zxCon h4{
+        width:70%;
+        margin: 0 auto;
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+    .zxTxt p{
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+    .zxlink{
+        margin-top: 40px;
+    }
+    .zxlink ul li{
+        font-size: 1.3rem;
+    }
+    /*最新资讯*/
+    .span002{
+        width:80%;
+        float: left;
+    }
+    .span002 h3{
+        font-size: 1.6rem;
+        line-height: 2rem;
+        color:#333;
+        margin-top: 10px;
+    }
+    .span002 p{
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        color:#999;
+    }
+    /*专家*/
+    .expTxt{
+        width:94%;
+        margin: 30px auto;
+    }
+    .expTxt h3{
+        font-size: 1.7rem;
+        line-height: 2.2rem;
+    }
+    .expTxt p{
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
+    /*专家详情*/
+    .intro{
+        width:50%;
+        float: left;
+        padding-left: 5%;
+    }
+    .intro h3{
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+    }
+    .intro p{
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+    /*分页*/
+    .page {
+        font-size: 1.3rem;
+        padding-bottom: 40px;
+        padding-top: 20px;
+        text-align: center;
+        color:#666;
+    }
+
+    /*课程详情*/
+    .introBox{
+        width:95%;
+        margin: 0 auto;
+    }
+    .introTitle h3{
+        font-size: 1.5rem;
+    }
+    .introTxt .courseBox{
+        width:95%;
+        height:auto;
+        margin: 30px auto 0;
+    }
+    .courseBox img{
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-width: 332px) and (max-width: 767px){
+    /*about content*/
+    .comBanner{
+        display: none;
+    }
+    .aboutCon h3{
+        font-size: 2.2rem;
+        line-height: 3rem;
+    }
+    .aboutCon h4{
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
+    .aboutTxt p{
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+    }
+    /*联系方式*/
+    .contactBox{
+        width:100%;
+    }
+    .contactTxt{
+        width:69%;
+        float: left;
+        padding-left: 5%;
+        padding-top: 10px;
+    }
+    .contactTxt p{
+        line-height: 2.2rem;
+        font-size: 1.3rem;
+    }
+    .weXin span{
+        font-size: 1.2rem;
+        line-height: 1.3rem;
+    }
+    .ly{
+        width:90%;
+        margin: 0 auto;
+    }
+    .ly h3{
+        font-size:1.8rem;
+        line-height: 2.2rem;
+    }
+    .ly h4{
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+    }
+    .inputBox{
+        width:100%;
+        padding:15px 0;
+    }
+    .inputMessage{
+        width:96%;
+        margin: 0 auto 20px;
+    }
+    .inputMessage input{
+        width:100%;
+        margin: 10px auto;
+        font-size: 1.2rem;
+    }
+    .textMessage{
+        width:96%;
+        margin: 0 auto 20px 0;
+    }
+    .textMessage textarea{
+        width:100%;
+        font-size: 1.2rem;
+        margin: 0 auto;
+    }
+    /*最新资讯*/
+    .newsCenter{
+        width:95%;
+        height:auto;
+        padding-top: 10px;
+        margin: 0 auto;
+    }
+    .newsTitle ul li{
+        width:50%;
+        font-size: 1.5rem;
+    }
+    .infor ul li a{
+        padding:15px 0;
+    }
+    .span001{
+        margin: 25px 3% 0 1%;
+        width:60px;
+        height:60px;
+        font-size: 3rem;
+        line-height: 35px;
+    }
+    .span001 em{
+        font-style: normal;
+        color:#9f9f9f;
+        font-size: 1.2rem;
+        line-height: 15px;
+    }
+    .span002{
+        width:70%;
+        float: left;
+    }
+    .span002 h3{
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+    }
+    .span002 p{
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+    }
+    /*资讯详情页*/
+    .zxCon{
+        padding: 10px 0;
+    }
+
+    .zxCon h3{
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+    }
+    .zxCon h4{
+        width:90%;
+        margin: 0 auto;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
+    .zxTxt p{
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
+    .zxlink{
+        margin-top: 30px;
+    }
+    .zxlink ul li{
+        width:50%;
+        height:48px;
+        font-size: 1.2rem;
+        overflow: hidden;
+    }
+    /*专家*/
+    .expTxt{
+        width:94%;
+        margin: 20px auto;
+    }
+    .expTxt h3{
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+    .expTxt p{
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+    }
+    /*专家详情*/
+    .jsImg{
+        max-width: 320px;
+        height:auto;
+        border:1px solid #ccc;
+        float: left;
+        text-align: right;
+    }
+    .jsImg img{
+        width:100%;
+        height:auto;
+
+    }
+    .intro{
+        width:90%;
+        float: left;
+        padding-left: 5%;
+    }
+    .intro h3{
+        font-size: 1.7rem;
+        line-height: 2.3rem;
+    }
+    .intro p{
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
+    .introBox .introTitle{
+        width:95%;
+        margin: 0 auto;
+    }
+    .introTitle p{
+        font-size: 1.3rem;
+    }
+    /*分页*/
+    .page {
+        font-size: 1.3rem;
+        padding-bottom: 40px;
+        padding-top: 20px;
+        text-align: center;
+        color:#666;
+    }
+    /*课程详情*/
+    .introBox{
+        width:95%;
+        margin: 0 auto;
+    }
+    .introTitle h3{
+        font-size: 1.5rem;
+    }
+    .introTxt .courseBox{
+        width:100%;
+        height:auto;
+        margin: 20px auto 0;
+    }
+    .courseBox img{
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 332px){
+    /*about content*/
+    .aboutCon h3{
+        font-size: 2.2rem;
+        line-height: 3rem;
+    }
+    .aboutCon h4{
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
+    .aboutTxt p{
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+    }
+    .comBanner{
+        display: none;
+    }
+    /*联系方式*/
+    .contactBox{
+        width:100%;
+    }
+    .contactTxt{
+        width:69%;
+        float: left;
+        padding-left: 5%;
+        padding-top: 10px;
+    }
+    .contactTxt p{
+        line-height: 2.2rem;
+        font-size: 1.3rem;
+    }
+    .weXin span{
+        font-size: 1.2rem;
+        line-height: 1.3rem;
+    }
+    .ly{
+        width:90%;
+        margin: 0 auto;
+    }
+    .ly h3{
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+    }
+    .ly h4{
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+    }
+    .inputBox{
+        width:100%;
+        padding:15px 0;
+    }
+    .inputMessage{
+        width:98%;
+        margin: 0 auto 20px;
+    }
+    .inputMessage input{
+        width:100%;
+        margin: 5px auto;
+        font-size: 1.2rem;
+    }
+    .textMessage{
+        width:98%;
+        margin: 0 auto 20px 0;
+    }
+    .textMessage textarea{
+        width:100%;
+        font-size: 1.2rem;
+        margin: 0 auto;
+    }
+    /*最新资讯*/
+    .newsCenter{
+        width:95%;
+        height:auto;
+        padding-top: 10px;
+        margin: 0 auto;
+    }
+    .newsTitle ul li{
+        width:50%;
+        font-size: 1.5rem;
+    }
+    .infor ul li a{
+        padding:15px 0;
+    }
+    .span001{
+        margin: 30px 3% 0 1%;
+        width:60px;
+        height:60px;
+        font-size: 3rem;
+        line-height: 35px;
+    }
+    .span001 em{
+        font-style: normal;
+        color:#9f9f9f;
+        font-size: 1.2rem;
+        line-height: 15px;
+    }
+    .span002{
+        width:70%;
+        float: left;
+    }
+    .span002 h3{
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+    }
+    .span002 p{
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+    }
+    /*资讯详情页*/
+    .zxCon{
+        padding: 10px 0;
+    }
+
+    .zxCon h3{
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+    }
+    .zxCon h4{
+        width:100%;
+        margin: 0 auto;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
+    .zxTxt p{
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
+    .zxlink{
+        margin-top: 30px;
+    }
+    .zxlink ul li{
+        width:50%;
+        height:48px;
+        font-size: 1.2rem;
+        overflow: hidden;
+    }
+
+    /*专家*/
+    .expTxt{
+        width:94%;
+        margin: 20px auto;
+    }
+    .expTxt h3{
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+    .expTxt p{
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+    }
+    /*专家详情*/
+    .jsImg{
+        max-width: 320px;
+        height:auto;
+        border:1px solid #ccc;
+        float: left;
+        text-align: right;
+    }
+    .jsImg img{
+        width:100%;
+        height:auto;
+
+    }
+    .intro{
+        width:90%;
+        float: left;
+        padding-left: 5%;
+    }
+    .intro h3{
+        font-size: 1.7rem;
+        line-height: 2.3rem;
+    }
+    .intro p{
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
+    .introBox .introTitle{
+        width:95%;
+        margin: 0 auto;
+    }
+    .introTitle p{
+        font-size: 1.3rem;
+    }
+    /*分页*/
+    .page {
+        font-size: 1.3rem;
+        padding-bottom: 40px;
+        padding-top: 20px;
+        text-align: center;
+        color:#666;
+    }
+    /*课程详情*/
+    .introBox{
+        width:95%;
+        margin: 0 auto;
+    }
+    .introTitle h3{
+        font-size: 1.5rem;
+    }
+    .introTxt .courseBox{
+        width:100%;
+        height:auto;
+        margin: 20px auto 0;
+    }
+    .courseBox img{
+        margin-bottom: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1745 @@
+@charset "UTF-8";
+
+/*关于谭谈高考*/
+.aboutWarp{
+    width:100%;
+    margin-top:50px;
+    background: #f4f4f4;
+}
+.showImg {
+    width:50%;
+    height:100%;
+    float: left;
+}
+.showImg img{
+    width:100%;
+}
+
+.aboutTxt{
+    width:50%;
+    float: right;
+}
+.about{
+    width:95%;
+    margin: 0 auto;
+    background: #f4f4f4;
+}
+.about h3{
+    padding-top: 20px;
+    text-align: center;
+    color:#333;
+    font-size: 2.8rem;
+    line-height: 3.1rem;
+    font-weight: normal;
+    text-align: center;
+}
+.about h4{
+    text-align: center;
+    color:#333;
+    font-size: 1.6rem;
+    font-family: "msyi";
+    padding-bottom: 15px;
+}
+.about p{
+    width:90%;
+    margin: 0 auto;
+    color:#666;
+    font-size: 1.3rem;
+    line-height: 2.2rem;
+    text-indent: 2rem;
+}
+.about >a{
+    display: block;
+    width:150px;
+    height:50px;
+    border:1px solid #333;
+    margin: 15px auto 0;
+    color:#333;
+    font-size: 2rem;
+    line-height: 50px;
+    text-align: center;
+}
+.about a:hover{
+    text-decoration: none;
+    border:1px solid #ff6600;
+    color:#ff6600;
+}
+
+/*最新资讯*/
+.news{
+    width:100%;
+    margin: 30px auto 0;
+}
+.newsMenu ul{
+    width:240px;
+    margin: 0 auto;
+}
+.newsMenu ul li{
+    float: left;
+    width:120px;
+    height:44px;
+    border:1px solid #333;
+    color:#333;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 44px;
+    cursor: pointer;
+}
+.newsMenu ul li.menuOn{
+    background: #018048;
+    border: none;
+    color:#fff;
+}
+
+.newsBox{
+    width:100%;
+    margin-top: 40px;
+}
+.newsBox >ul >li{
+    float: left;
+    width:48%;
+    height:40px;
+    border-bottom: 1px solid #f4f4f4;
+    position: relative;
+}
+.newsBox >ul >li:nth-of-type(2n){
+    margin-left: 4%;
+}
+.newsBox >ul >li >a{
+    color:#666;
+    font-size: 1.3rem;
+    line-height: 40px;
+    padding-left: 2%;
+}
+.newsBox >ul >li >a >span{
+    display: inline-block;
+    width:72%;
+    height:40px;
+    overflow: hidden;
+}
+.newsBox >ul >li >a >em{
+    font-style: normal;
+    position: absolute;
+    bottom:0;
+    right:1%;
+    color:#999;
+}
+.newsBox >ul >li:hover a{
+    text-decoration: none;
+    color:#ff6600;
+}
+.newsBox >ul >li:hover >a >em{
+    color:#ff6600;
+}
+/*专家介绍*/
+.expertBox{
+    width:100%;
+    margin-top: 40px;
+    position: relative;
+}
+.scrollPic{
+    max-width:1170px;
+    max-height:250px;
+    margin:50px auto 0;
+    position: relative;
+}
+.myScroll{
+    display:block;
+    width:1090px;
+    position:relative;
+    height:250px;
+    overflow:hidden;
+    margin: 0 auto;
+}
+.myScroll .myScrollbox{
+    display:block;
+    float:left;
+    position:absolute;
+    left:0;
+    top:0;
+}
+.myScroll ul{
+    display:block;
+    float:left;
+    list-style-type:none;
+    padding:0;
+    margin:0 auto 0;
+    width:100%;
+    overflow: hidden;
+}
+.myScroll ul li{
+    display:block;
+    float:left;
+    text-align: center;
+}
+.myScroll ul li a{
+    display:block;
+    float:left;
+    width:362px;
+    position:relative;
+    padding: 0 21px;
+    height:250px;
+}
+.myScroll ul li a img{
+    width:320px;
+    height:250px;
+}
+.mybtns{
+    width:100%;
+    display:block;
+}
+.myBtns a{
+    width:40px;
+    height:40px;
+    display:block;
+    float:left;
+    margin-right:1px;
+}
+.myBtns a.left:hover{
+    background-image:url("../images/icon01.png");
+}
+.myBtns a.right:hover{
+    background-image:url("../images/icon02.png");
+}
+.myBtns a:hover,
+.mySscroll, .myBtns a,
+.myScroll a:hover .intro,
+.myScroll a .intro,
+.myScroll .myScrollbox{
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.myBtns .left{
+    background-image:url("../images/icon03.png");
+    position: absolute;
+    left:0;
+    top:105px;
+    z-index: 111;}
+.myBtns .right{
+    background-image:url("../images/icon04.png");
+    position: absolute;
+    right:0;
+    top:105px;
+    z-index: 111;
+}
+.intro{
+    display: none;
+    position: absolute;
+    left:21px;
+    width:320px;
+    height:100%;
+    max-height: 250px;
+    overflow: hidden;
+    bottom:-250px;
+}
+.myScroll a:hover .intro{
+    background: rgba(0,0,0,0.8);
+    z-index: 10;
+    display: block;
+    z-index: 12;
+    bottom:0;
+    animation: zz 0.3s linear 0s forwards;
+    -webkit-animation: zz 0.3s linear 0s forwards;
+}
+@keyframes zz {
+    0%{
+        bottom:-250px;
+    }
+    100%{
+        bottom:0px;
+    }
+}
+@-webkit-keyframes zz {
+    0%{
+        bottom:-250px;
+    }
+    100%{
+        bottom:0px;
+    }
+}
+.intro h3{
+    font-size: 1.8rem;
+    line-height: 5rem;
+    width:90%;
+    color:#fff;
+    margin: 0 auto;
+    font-weight: normal;
+    padding-top: 10px;
+    text-align: left;
+}
+.intro p{
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    width:90%;
+    color:#dedede;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/*2017日程安排*/
+.comNav{
+    width:100%;
+    padding-top: 50px;
+    text-align: center;
+}
+.comNav >p{
+    color:#333;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    font-family: "msyi";
+    margin: 0 auto;
+}
+.comNav >h3{
+    color:#333;
+    font-size: 3rem;
+    font-weight: normal;
+    margin: 0 auto;
+}
+.comNav >h3 >a{
+    color:#333;
+    text-decoration:none;
+}
+.comNav >h3 >a:hover{
+    color:#333;
+    text-decoration:none;
+}
+.comNav .comLine {
+    width:60px;
+    height:1px;
+    background: #333;
+    margin: 8px auto;
+}
+.schedBox{
+    width:90%;
+    margin: 30px auto 0;
+}
+.schedNav ul{
+    width:240px;
+    margin: 0 auto;
+}
+.schedNav ul li{
+    float: left;
+    width:120px;
+    height:44px;
+    border:1px solid #333;
+    color:#333;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 44px;
+    cursor: pointer;
+}
+.schedNav ul li.hit{
+    background: #018048;
+    border: none;
+    color:#fff;
+}
+.schedPanes{
+    width:100%;
+    margin-top: 30px;
+}
+.schedPanes table{
+    border:1px solid #ccc;
+    box-sizing: border-box;
+    width:100%;
+}
+.schedPanes table .trTit{
+    background: #fbfbfb;
+    height:46px;
+    color:#333;
+    font-size: 1.3rem;
+}
+.schedPanes table tr{
+    height:46px;
+    color:#666;
+    overflow: hidden;
+}
+.schedPanes table td{
+    text-align: center;
+    border-bottom:1px solid #ededed;
+    border-right:1px solid #ededed;
+    line-height: 2.2rem;
+    font-size: 1.3rem;
+}
+.schedPanes table tr:last-child td{
+    border-bottom:none;
+}
+.schedPanes table td:last-child{
+    border-right:none;
+}
+.schedPanes .trWid001{
+    width:8%;
+}
+.schedPanes .trWid002{
+    width:20%;
+}
+.schedPanes .trWid003{
+    width:38%;
+    padding:0 1%;
+}
+.schedPanes .trWid004{
+    width:20%;
+}
+.schedPanes .trWid005{
+    width:14%;
+    padding:0 1%;
+}
+.schedPanes .trWid004 a{
+    display: inline-block;
+    color:#fff;
+    padding:2% 10%;
+    border-radius: 5px;
+    line-height: 2.2rem;
+    font-size: 1.3rem;
+    background: #ccc;
+}
+.schedPanes .trWid004 a.appoint{
+    background: #ff6600;
+}
+.schedPanes .trWid004 a.ticket{
+    background: #009966;
+}
+.schedPanes .trWid004 a:hover{
+    text-decoration: none;
+}
+.schedPanes .end{
+    color:#f60808;
+}
+/*课程回顾*/
+.scrollPic2{
+    max-width:1170px;
+    max-height:430px;
+    margin:50px auto 0;
+    position: relative;
+}
+.myScroll2{
+    display:block;
+    width:1090px;
+    position:relative;
+    height:430px;
+    overflow:hidden;
+    margin: 0 auto;
+}
+.myScroll2 .myScrollbox2{
+    display:block;
+    float:left;
+    position:absolute;
+    left:0;
+    top:0;
+}
+.myScroll2 ul{
+    display:block;
+    float:left;
+    list-style-type:none;
+    padding:0;
+    margin:0 auto 0;
+    width:100%;
+    overflow: hidden;
+}
+.myScroll2  div.revBox div.col-sm-6{
+    display:inline-block;
+    float:left;
+    text-align: center;
+    width:272px;
+}
+
+
+.mybtns2{
+    width:100%;
+    display:block;
+}
+.myBtns2 a{
+    width:40px;
+    height:40px;
+    display:block;
+    float:left;
+    margin-right:1px;
+}
+.myBtns2 a.left2:hover{
+    background-image:url("../images/icon01.png");
+}
+.myBtns2 a.right2:hover{
+    background-image:url("../images/icon02.png");
+}
+.myBtns2 a:hover,
+.mySscroll2, .myBtns2 a,
+.myScroll2 a:hover .intro2,
+.myScroll2 a .intro2,
+.myScroll2 .myScrollbox2{
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.myBtns2 .left2{
+    background-image:url("../images/icon03.png");
+    position: absolute;
+    left:0;
+    top:220px;
+    z-index: 111;}
+.myBtns2 .right2{
+    background-image:url("../images/icon04.png");
+    position: absolute;
+    right:0;
+    top:220px;
+    z-index: 111;
+}
+
+
+
+
+
+.revBox{
+    margin-top: 40px;
+}
+.reviewList{
+    max-width: 280px;
+    margin: 0 auto 20px;
+    background: #fff;
+    border:1px solid #ccc;
+}
+
+.imgBox img{
+    max-width: 100%;
+    height:auto;
+}
+.imgBox {
+    width:100%;
+    max-height: 230px;
+}
+.tevTxt{
+    max-width: 94%;
+    margin: 0 auto;
+}
+.tevTxt h4{
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    color:#333;
+    margin:20px 0;
+}
+.tevTxt p{
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color:#999;
+}
+.tevTxt a{
+    display: block;
+}
+.tevTxt .more{
+    width:80px;
+    height:30px;
+    color:#fff;
+    background: #f39800;
+    text-align: center;
+    line-height: 30px;
+    font-size: 1.3rem;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+.tevTxt a:hover{
+    text-decoration: none;
+}
+/*友情链接*/
+.linkBox{
+    width:100%;
+    margin-top: 40px;
+}
+.linkImg{
+    max-width: 350px;
+    max-height:110px;
+    border:1px solid #cccccc;
+    background: #fff;
+    margin: 0 auto 25px;
+}
+.linkImg a{
+    display: block;
+    text-align: center;
+}
+.linkImg a img{
+    max-width: 100%;
+    height:auto;
+}
+
+/*弹出层*/
+.zzc{
+    display: none;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 11111;
+    display: block;
+    position:fixed;
+}
+.zzc01{
+    display: none;
+    width:360px;
+    height:230px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top: -115px;
+    margin-left: -180px;
+    background: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    z-index: 22222;
+}
+.iconBox{
+    width:100%;
+    height:115px;
+    text-align: center;
+    padding: 30px 20px;
+    line-height: 60px;
+}
+.iconBox img{
+    width:60px;
+    height:60px;
+}
+.iconBox span{
+    display: inline-block;
+    padding-left: 20px;
+    font-size: 1.8rem;
+    color:#333;
+}
+.btnBox01{
+    width:80%;
+    height:115px;
+    margin: 0 auto;
+}
+.btnBox01 ul li{
+    width:50%;
+    float: left;
+    text-align: center;
+    padding:20px 26px 50px;
+    cursor: pointer;
+}
+.btnBox01 a{
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 44px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+.btnBox01 a:hover{
+    text-decoration: none;
+}
+.btnBox01 a:hover.qd01{
+    color:#333355;
+}
+.btnBox01 a:hover.qx01{
+    color:#777;
+}
+.qd01{
+    width:100px;
+    height:44px;
+    background: #ffce0d;
+    text-align: center;
+    color:#333355;
+}
+.qx01{
+    width:100px;
+    height:44px;
+    background: #ebebeb;
+    text-align: center;
+    color:#777;
+}
+
+.zzc02{
+    display: none;
+    width:360px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top: -240px;
+    margin-left: -180px;
+    background: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    z-index: 22222;
+}
+
+.zzc06{
+    display: none;
+    width:360px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top: -240px;
+    margin-left: -180px;
+    background: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    z-index: 22222;
+}
+.close01{
+    width:32px;
+    height:32px;
+    background:#fff url("../images/close.png") no-repeat center;
+    position: absolute;
+    top:-14px;
+    right:-14px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    cursor: pointer;
+}
+.close02{
+    width:32px;
+    height:32px;
+    background:#fff url("../images/close.png") no-repeat center;
+    position: absolute;
+    top:-14px;
+    right:-14px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    cursor: pointer;
+}
+.zzcTop{
+    width:100%;
+    height:60px;
+    line-height: 60px;
+    border-top-left-radius: 5px;
+    -wekit-border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    -wekit-border-top-right-radius: 5px;
+    background: #f5f4f4;
+    text-align: center;
+    font-size: 1.8rem;
+    color:#333;
+}
+.zzcInfor{
+    width:80%;
+    margin: 15px auto;
+}
+.zzcInfor input{
+    width:100%;
+    height:44px;
+    line-height: 44px;
+    border:1px solid #eee;
+    border-radius: 5px;
+    -wekit-border-radius: 5px;
+    margin-bottom: 15px;
+    text-indent: 1em;
+    font-size: 1.4rem;
+    color:#999;
+}
+.zzcInfor input:focus{
+    border:1px solid #ffcc33;
+}
+.zzcInfor .deter{
+    width:100%;
+    height:44px;
+    line-height: 44px;
+    background: #ffce0d;
+    border:none;
+    border-radius: 5px;
+    -wekit-border-radius: 5px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-size: 1.5rem;
+    color:#333355;
+}
+.zzc03{
+    display: none;
+    width:360px;
+    height:230px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top: -115px;
+    margin-left: -180px;
+    background: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    z-index: 22222;
+}
+.succBox{
+    width:70%;
+    text-align: center;
+    margin: 20px auto;
+}
+.succSpan{
+    display: block;
+    font-size: 1.8rem;
+    line-height: 4rem;
+    color:#33cc00;
+}
+.btnBox02{
+    width:86%;
+    height:82px;
+    margin: 0 auto;
+}
+.btnBox02 ul li{
+    width:50%;
+    float: left;
+    text-align: center;
+    padding:5px 9%;
+    cursor: pointer;
+}
+.btnBox02 a{
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 44px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+.btnBox02 a:hover{
+    text-decoration: none;
+}
+.btnBox02 a:hover.more01{
+    color:#333355;
+}
+.btnBox02 a:hover.qd02{
+    color:#777;
+}
+.more01{
+    width:140px;
+    height:44px;
+    background: #ffce0d;
+    text-align: center;
+    color:#333355;
+}
+.qd02{
+    width:100px;
+    height:44px;
+    background: #ebebeb;
+    text-align: center;
+    color:#777;
+}
+.zzc04{
+    display: none;
+    width:360px;
+    height:230px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top: -115px;
+    margin-left: -180px;
+    background: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    z-index: 22222;
+}
+.errorBox{
+    width:70%;
+    text-align: center;
+    margin: 20px auto;
+}
+.erroSpan{
+    display: block;
+    font-size: 1.8rem;
+    line-height: 4rem;
+    color:#666;
+    text-align: center;
+}
+.errorBtn{
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 44px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    width:140px;
+    height:44px;
+    background: #ffce0d;
+    text-align: center;
+    color:#fff;
+    margin: 0 auto;
+}
+.errorBtn:hover{
+    text-decoration: none;
+    color:#fff;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    /*最新资讯*/
+    .newsBox >ul >li >a{
+        font-size: 1.3rem;
+    }
+    .newsBox >ul >li >a span{
+        display: inline-block;
+        width:75%;
+        height:40px;
+        overflow: hidden;
+    }
+    /*关于谭谈高考*/
+    .about h3{
+        padding-top: 0;
+        line-height: 2.8rem;
+        font-size: 2.5rem;
+    }
+    .about h4{
+        padding-bottom: 5px;
+        font-size: 1.5rem;
+    }
+    .about >a{
+        margin: 20px auto 0;
+        width:140px;
+        height:40px;
+        line-height: 40px;
+        font-size: 1.6rem;
+    }
+    .yc{
+        display: none;
+    }
+    /*专家介绍*/
+    .scrollPic{
+        max-width:930px;
+        width:100%;
+        height:195px;
+    }
+    .myScroll{
+        width:850px;
+        height:195px;
+    }
+    .myScroll ul li a{
+        width:280px;
+        padding: 0 15px;
+        height:195px;
+    }
+    .myScroll ul li a img{
+        width:250px;
+        height:195px;
+    }
+    .intro{
+        position: absolute;
+        left:15px;
+        width:250px;
+        height:195px;
+    }
+    .myBtns .left{
+        left:0;
+        top:85px;
+    }
+    .myBtns .right{
+        position: absolute;
+        right:0;
+        top:85px;
+    }
+    .intro h3{
+        font-size: 1.7rem;
+        line-height: 5rem;
+    }
+    .intro p{
+        font-size: 1.3rem;
+        line-height: 2.5rem;
+    }
+    /*友情链接*/
+    .linkBox{
+        margin-top: 30px;
+    }
+    .linkImg{
+        max-width: 288px;
+        margin: 0 auto 25px;
+    }
+}
+
+
+@media (max-width: 992px) {
+    /*最新资讯*/
+
+    .newsNav{
+        padding-left: 2%;
+        padding-top: 35px;
+    }
+    .newsNav >p{
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
+    .newsNav >h3{
+        font-size: 2.6rem;
+    }
+    .newsBox{
+        margin-top: 30px;
+    }
+    .newsBox >ul >li{
+        width:100%;
+    }
+    .newsBox >ul >li >a{
+        font-size: 1.3rem;
+    }
+    .newsBox >ul >li:nth-of-type(2n){
+        margin-left:0;
+        display: none;
+    }
+    /*2017日程安排*/
+    .comNav >p{
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
+    .comNav >h3{
+        font-size:2.6rem;
+    }
+    .menu, .online{
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .navBox {
+        display: none;
+    }
+    .logoBox {
+        width: 80%;
+        height:100px;
+        padding-left: 5%;
+    }
+
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    /*关于谭谈高考*/
+    .showImg{
+        display: none;
+    }
+    .aboutTxt{
+        width:100%;
+    }
+    .about h3{
+        padding-top: 0;
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+    }
+    .about h4{
+        font-size: 1.3rem;
+        line-height: 1.3rem;
+        font-family: "msyi";
+        padding-bottom: 5px;
+        margin: 0;
+    }
+    .about >a{
+        margin: 20px auto;
+        width:150px;
+        height:40px;
+        line-height: 40px;
+        font-size: 1.8rem;
+    }
+    .about p{
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+        display: block;
+    }
+    /*专家介绍*/
+    .scrollPic{
+        max-width:750px;
+        width:100%;
+        height:262px;
+    }
+    .myScroll{
+        width:630px;
+        height:262px;
+    }
+    .myScroll ul li a{
+        width:315px;
+        padding: 0 15px;
+        height:262px;
+    }
+    .myScroll ul li a img{
+        width:285px;
+        height:222px;
+    }
+    .intro{
+        display: block;
+        position: absolute;
+        left:15px;
+        bottom:10px;
+        width:285px;
+        height:40px;
+        background: #f4f4f4;
+    }
+    .myBtns .left{
+        left:0;
+        top:91px;
+    }
+    .myBtns .right{
+        position: absolute;
+        right:0;
+        top:91px;
+    }
+    .intro h3{
+        font-size: 1.7rem;
+        line-height: 40px;
+        color:#333;
+        text-align: center;
+        padding:0;
+    }
+    /*2017日程安排*/
+    .comNav{
+        padding-top: 35px;
+    }
+    .comNav >p{
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
+    .comNav >h3{
+        font-size:2.6rem;
+    }
+    .schedPanes table td{
+        font-size: 1.3rem;
+    }
+    .schedPanes .trWid004 a{
+        font-size: 1.3rem;
+        padding:2% 8%;
+    }
+    /*课程回顾*/
+    .revBox{
+        margin-top: 30px;
+    }
+    .tevTxt h4{
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+    .tevTxt p{
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
+    .tevTxt .more{
+        width:70px;
+        height:25px;
+        line-height: 25px;
+        font-size: 1.2rem;
+        margin: 15px auto;
+    }
+    /*友情链接*/
+    .linkBox{
+        margin-top: 30px;
+    }
+    .linkImg{
+        max-width: 288px;
+        margin: 0 auto 25px;
+    }
+
+}
+
+@media (min-width: 332px) and (max-width: 767px) {
+    /*弹出层*/
+    .zzc01{
+        width:90%;
+        height:200px;
+        position:fixed;
+        top:50%;
+        left:55%;
+        margin-top: -100px;
+        margin-left: -50%;
+    }
+    .iconBox{
+        width:100%;
+        height:100px;
+        text-align: center;
+        padding: 30px 20px;
+        line-height: 60px;
+    }
+    .iconBox span{
+        font-size: 1.6rem;
+    }
+    .btnBox01 ul li{
+        padding:20px 10px 50px;
+    }
+    .btnBox01 a{
+        font-size: 1.4rem;
+    }
+
+    .zzc02{
+        width:90%;
+        top:10%;
+        left:55%;
+        margin-top: 0;
+        margin-left: -50%;
+    }
+    .zzc06{
+        width:90%;
+        top:10%;
+        left:55%;
+        margin-top: 0;
+        margin-left: -50%;
+    }
+    .zzcTop{
+        font-size: 1.5rem;
+        height:50px;
+        line-height: 50px;
+    }
+    .zzcInfor input{
+        font-size: 1.3rem;
+    }
+    .zzcInfor .deter{
+        font-size: 1.4rem;
+    }
+    .zzc03{
+        width:90%;
+        height:220px;
+        top:50%;
+        left:55%;
+        margin-top: -110px;
+        margin-left: -50%;
+    }
+    .succSpan{
+        font-size: 1.6rem;
+        line-height: 3.5rem;
+    }
+    .btnBox02 a{
+        font-size: 1.4rem;
+    }
+    .zzc04{
+        width:90%;
+        height:220px;
+        top:50%;
+        left:55%;
+        margin-top: -110px;
+        margin-left: -50%;
+    }
+    .errorBox{
+        width:90%;
+    }
+    .erroSpan{
+        font-size: 1.6rem;
+        line-height: 3.5rem;
+    }
+    .errorBtn{
+        font-size: 1.4rem;
+    }
+    .logoBox {
+        width: 75%;
+        height:76px;
+    }
+    .logoBox >img{
+        width:200px;
+        height:52px;
+        margin-top:11px;
+    }
+
+    /*关于谭谈高考*/
+    .aboutWarp{
+        padding-top:0;
+    }
+    .showImg{
+        display: none;
+    }
+    .aboutTxt{
+        width:100%;
+    }
+    .about{
+        width:95%;
+    }
+    .about h3{
+        padding-top: 5px;
+        font-size: 2.4rem;
+    }
+    .about h4{
+        padding-bottom: 0;
+        font-size: 1.3rem;
+    }
+    .about a{
+        margin: 20px auto;
+        font-size: 1.6rem;
+        width:140px;
+        height:45px;
+        line-height: 45px;
+    }
+    .about .yc{
+        display: none;
+    }
+    /*最新资讯*/
+    .newsNav{
+        padding-left: 3%;
+        padding-top: 20px;
+    }
+    .newsNav >p{
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+    }
+    .newsNav >h3{
+        font-size: 2.4rem;
+    }
+    .newsNav >a{
+        font-size: 1.3rem;
+    }
+    .newsBox{
+        margin-top: 20px;
+    }
+    .newsBox >ul >li{
+        width:100%;
+    }
+    .newsBox >ul >li >a{
+        font-size: 1.2rem;
+    }
+    .newsBox >ul >li:nth-of-type(2n){
+        margin-left:0;
+        display: none;
+    }
+    /*专家介绍*/
+    .scrollPic{
+        width:100%;
+        height:260px;
+    }
+    .myScroll{
+        width:300px;
+        height:260px;
+    }
+    .myScroll ul li a{
+        width:300px;
+        padding:0 15px;
+        height:260px;
+    }
+    .myScroll ul li a img{
+        width:270px;
+        height:210px;
+    }
+    .intro{
+        display: block;
+        position: absolute;
+        left:15px;
+        bottom:10px;
+        width:270px;
+        height:40px;
+        background: #f4f4f4;
+    }
+    .myBtns .left{
+        top:85px;
+    }
+    .myBtns .right{
+        top:85px;
+    }
+    .intro h3{
+        font-size: 1.7rem;
+        line-height: 40px;
+        color:#333;
+        padding:0;
+        text-align: center;
+    }
+    .intro p{
+        font-size: 1.2rem;
+        line-height: 2.3rem;
+        color:#999;
+    }
+
+    /*2017日程安排*/
+    .comNav{
+        padding-top: 20px;
+    }
+    .comNav >p{
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+    }
+    .comNav >h3{
+        font-size:2.4rem;
+    }
+    .schedPanes table td{
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    .schedPanes .trWid004 a{
+        font-size: 1rem;
+        line-height: 1.5rem;
+        padding:2% 5%;
+    }
+    /*课程回顾*/
+    .revBox{
+        margin-top: 20px;
+    }
+    .reviewList{
+        max-width:100%;
+        height:auto;
+    }
+    .imgBox{
+        width:42%;
+        padding: 2% 1%;
+        float: left;
+    }
+    .tevTxt{
+        width:58%;
+        padding:2%;
+        float: left;
+    }
+    .tevTxt h4{
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        padding:0;
+        margin: 5% auto;
+    }
+    .tevTxt p{
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: box;
+        display: -webkit-box;
+        line-clamp: 2;
+        box-orient: vertical;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    .tevTxt .more{
+        width:60px;
+        height:20px;
+        line-height: 20px;
+        font-size: 1.1rem;
+        margin: 0 auto;
+    }
+    /*友情链接*/
+    .linkBox{
+        margin-top: 20px;
+    }
+    .linkImg{
+        max-width: 175px;
+        margin: 0 auto 15px;
+    }
+
+}
+@media (max-width: 332px){
+    /*弹出层*/
+    .zzc01{
+        width:90%;
+        height:200px;
+        top:50%;
+        left:55%;
+        margin-top: -100px;
+        margin-left: -50%;
+        background: #fff;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        z-index: 22222;
+    }
+    .iconBox{
+        width:100%;
+        height:100px;
+        text-align: center;
+        padding: 30px 20px;
+        line-height: 60px;
+    }
+    .iconBox span{
+        font-size: 1.6rem;
+    }
+    .btnBox01 ul li{
+        padding:20px 10px 50px;
+    }
+    .btnBox01 a{
+        font-size: 1.4rem;
+    }
+
+    .zzc02{
+        width:90%;
+        top:5%;
+        left:55%;
+        margin-top: 0;
+        margin-left: -50%;
+    }
+    .zzc06{
+        width:90%;
+        top:5%;
+        left:55%;
+        margin-top: 0;
+        margin-left: -50%;
+    }
+    .zzcTop{
+        font-size: 1.5rem;
+        height:36px;
+        line-height: 36px;
+    }
+    .zzcInfor input{
+        font-size: 1.3rem;
+    }
+    .zzcInfor .deter{
+        font-size: 1.4rem;
+    }
+    .zzc03{
+        width:90%;
+        height:220px;
+        top:50%;
+        left:55%;
+        margin-top: -110px;
+        margin-left: -50%;
+    }
+    .succSpan{
+        font-size: 1.6rem;
+        line-height: 3.5rem;
+    }
+    .more01{
+        width:120px;
+    }
+    .qd02{
+        width:85px;
+    }
+    .btnBox02 a{
+        font-size: 1.4rem;
+    }
+
+    .zzc04{
+        width:90%;
+        height:220px;
+        top:50%;
+        left:55%;
+        margin-top: -110px;
+        margin-left: -50%;
+    }
+    .zzc05{
+        width:90%;
+        height:220px;
+        top:50%;
+        left:55%;
+        margin-top: -110px;
+        margin-left: -50%;
+        background: #46b8da;
+    }
+    .errorBox{
+        width:90%;
+    }
+    .erroSpan{
+        font-size: 1.6rem;
+        line-height: 3.5rem;
+    }
+    .errorBtn{
+        width:120px;
+        font-size: 1.4rem;
+    }
+    .logoBox {
+        width: 75%;
+        height:76px;
+    }
+    .logoBox >img{
+        width:200px;
+        height:52px;
+        margin-top:11px;
+    }
+
+
+
+    .logoBox {
+        width: 70%;
+        height:66px;
+    }
+    .logoBox >img{
+        width:170px;
+        height:44px;
+        margin-top:11px;
+    }
+
+    /*关于谭谈高考*/
+    .aboutWarp{
+        padding-top:0;
+    }
+    .showImg {
+        display: none;
+    }
+    .aboutTxt{
+        width:100%;
+    }
+    .about{
+        width:95%;
+    }
+    .about h3{
+        padding-top: 0;
+        font-size: 2.4rem;
+    }
+    .about h4{
+        padding-bottom: 0;
+        font-size: 1.3rem;
+    }
+    .about a{
+        margin: 20px auto;
+        font-size: 1.8rem;
+        width:140px;
+        height:45px;
+        line-height: 45px;
+    }
+    .about .yc{
+        display: none;
+    }
+    /*最新资讯*/
+    .newsNav{
+        padding-left: 3%;
+        padding-top: 20px;
+    }
+    .newsNav >p{
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+    }
+    .newsNav >h3{
+        color:#333;
+        font-size: 2.4rem;
+    }
+    .newsNav >a{
+        font-size: 1.3rem;
+    }
+    .newsBox{
+        margin-top: 20px;
+    }
+    .newsBox >ul >li{
+        width:100%;
+    }
+    .newsBox >ul >li >a{
+        font-size: 1.2rem;
+    }
+    .newsBox >ul >li >a span{
+        width:70%;
+    }
+    .newsBox >ul >li:nth-of-type(2n){
+        margin-left:0;
+        display: none;
+    }
+    /*专家介绍*/
+    .scrollPic{
+        width:100%;
+        height:178px;
+    }
+    .myScroll{
+        width:220px;
+        height:178px;
+    }
+    .myScroll ul li a{
+        width:220px;
+        padding:0 15px;
+        height:178px;
+    }
+    .myScroll ul li a img{
+        width:190px;
+        height:148px;
+    }
+    .intro{
+        display: block;
+        position: absolute;
+        left:15px;
+        bottom:10px;
+        width:190px;
+        height:30px;
+        background: #f4f4f4;
+    }
+    .myBtns .left{
+        top:54px;
+    }
+    .myBtns .right{
+        top:54px;
+    }
+    .intro h3{
+        font-size: 1.4rem;
+        line-height: 30px;
+        text-align: center;
+        color:#333;
+        padding:0;
+    }
+    /*2017日程安排*/
+    .comNav{
+        padding-top: 20px;
+    }
+    .comNav >p{
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+    }
+    .comNav >h3{
+        font-size:2.4rem;
+    }
+    .schedPanes table td{
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    .schedPanes .trWid004 a{
+        font-size: 1rem;
+        line-height: 1.5rem;
+        padding:2% 3%;
+    }
+    /*课程回顾*/
+    .revBox{
+        margin-top: 20px;
+    }
+    .reviewList{
+        max-width:100%;
+        height:auto;
+    }
+    .imgBox{
+        width:45%;
+        padding:2% 1% 0;
+        float: left;
+    }
+    .tevTxt{
+        width:55%;
+        padding:2% 1%;
+        float: left;
+    }
+    .tevTxt h4{
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+        padding:0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: box;
+        display: -webkit-box;
+        line-clamp: 1;
+        box-orient: vertical;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        margin: 5% auto;
+    }
+    .tevTxt p{
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: box;
+        display: -webkit-box;
+        line-clamp: 2;
+        box-orient: vertical;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    .tevTxt .more{
+        width:60px;
+        height:20px;
+        line-height: 20px;
+        font-size: 1.1rem;
+        margin: 0 auto;
+    }
+    /*友情链接*/
+    .linkBox{
+        margin-top: 20px;
+    }
+    .linkImg{
+        max-width: 170px;
+        margin: 0 auto 15px;
+    }
+    .col-xs-6{
+        width:48% !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

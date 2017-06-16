@@ -1,0 +1,34 @@
+*{
+    margin: 0 auto;
+    padding:0;
+}
+.box{
+    margin: 0;
+    padding: 0;
+    width: 800px;
+    height: 10000px;
+
+}
+.body{
+    margin: 0;
+    padding: 50px;
+    line-height: 2em;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+    color: #000000;
+    background: #d3d3d3 top center no-repeat;
+    height: 1000px;
+}
+.textstyle{
+    width: 500px;
+    height: 100px;
+    background-color: darkgrey;
+}
+.button {
+    width: 70px;
+    height: 35px;
+    font-size: 10pt;
+}
+
+
+

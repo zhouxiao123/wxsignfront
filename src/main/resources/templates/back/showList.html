@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>已买票列表</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" th:href="@{css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{css/bootstrap-responsive.min.css}"/>
+    <link rel="stylesheet" th:href="@{css/uniform.css}"/>
+    <link rel="stylesheet" th:href="@{css/select2.css}"/>
+    <link rel="stylesheet" th:href="@{css/matrix-style.css}"/>
+    <link rel="stylesheet" th:href="@{css/matrix-media.css}"/>
+    <link rel="stylesheet" th:href="@{css/bootstrap-wysihtml5.css}" />
+    <link th:href="@{font-awesome/css/font-awesome.css}" rel="stylesheet"/>
+    <!--<link href='http://fonts.useso.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css' />-->
+</head>
+<body>
+
+
+<div id="content"  style="margin-left:0">
+
+    <div id="content-header">
+        <div id="breadcrumb"><a href="main.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> 首页</a>
+            <a
+                    href="#" class="current">预约</a></div>
+        <h1>购买列表</h1>
+    </div>
+    <div class="container-fluid">
+        <hr/>
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="widget-box">
+                    <div class="widget-title"><span class="icon"><i class="icon-th"></i></span>
+                        <h5>购买信息</h5>
+                    </div>
+                    <div class="widget-content nopadding">
+                        <div style="padding:5px">
+                            <!--<h5 style="display:inline-block">搜索</h5>-->
+                            <div style="width:300px;display:inline-block;line-height:30px">
+                                <label style="width:60px;display:inline-block;line-height:30px">使用情况:</label>
+                                <select name="swipe">
+                                    <option value="0">全部</option>
+                                    <option value="1" th:selected="${1==swipe}">已使用</option>
+                                    <option value="2" th:selected="${2==swipe}">未使用</option>
+                                    <!--<option th:each="l:${lesson}" th:selected="${l.lessonId==lid}" th:value="${l.lessonId}" th:text="|${l.lessonTitle}${l.startTime==l.endTime?(#calendars.format(l.startTime,'yyyy-MM-dd')):(#calendars.format(l.startTime,'yyyy-MM-dd')+'~'+#calendars.format(l.endTime,'yyyy-MM-dd'))}|"></option>-->
+                                </select>
+                            </div>
+                            <div style="width:300px;display:inline-block;line-height:30px">
+                                <label style="width:60px;display:inline-block;line-height:30px">购票类型:</label>
+                                <select name="meetType">
+                                    <option value="0">全部</option>
+                                    <option value="1" th:selected="${1==meetType}">高招</option>
+                                    <option value="2" th:selected="${2==meetType}">中招</option>
+                                    <!--<option th:each="l:${lesson}" th:selected="${l.lessonId==lid}" th:value="${l.lessonId}" th:text="|${l.lessonTitle}${l.startTime==l.endTime?(#calendars.format(l.startTime,'yyyy-MM-dd')):(#calendars.format(l.startTime,'yyyy-MM-dd')+'~'+#calendars.format(l.endTime,'yyyy-MM-dd'))}|"></option>-->
+                                </select>
+                            </div>
+                            <label style="width:60px;display:inline-block;line-height:30px">手机号:</label>
+                            <input name="phone" type="text" th:value="${phone}"/>
+                            <input type="button" value="搜索" onclick="searchBt(this)"/>
+
+                            <label style="width:60px;display:inline-block;line-height:30px">总数量:</label>
+                            <label style="width:60px;display:inline-block;line-height:30px" th:text="${totalCount}">总数量:</label>
+
+
+                        </div>
+                        <!--<p th:text="${appoints}">显示预约信息</p>-->
+                        <table class="table table-bordered data-table">
+                            <thead>
+                            <tr>
+                                <th>openId</th>
+                                <th>订单号</th>
+                                <th>微信订单号</th>
+                                <th>支付金额</th>
+                                <th>联系电话</th>
+                                <th>购买时间</th>
+                                <th>使用情况</th>
+                                <th>使用时间</th>
+                                <th>购票类型</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr  class="gradeX" th:each="c:${codeList}">
+                                <td th:text="${c.openId}">01</td>
+                                <td th:text="${c.orderNumber}" >周肖</td>
+                                <td th:text="${c.payNumber}">123456</td>
+                                <td th:text="${c.payPrice}"  class="center">3</td>
+                                <td th:text="${c.phone}" >成都</td>
+                                <td th:text="${c.createTime}" >讲座</td>
+                                <td th:text="${c.swipeTime==null?'未使用':'已使用'}" >讲座</td>
+                                <td th:text="${c.swipeTime}" >讲座</td>
+                                <td th:text="${c.meetType==1?'高招会':'中招会'}" >123456</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div th:if="${!#lists.isEmpty(codeList)}" class="pagination" th:include="frame/my_pagination::my_pagination"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script th:src="@{js/jquery.min.js}"></script>
+<script th:src="@{js/select2.min.js}"></script>
+<script th:src="@{js/bootstrap.min.js}"></script>
+<script th:src="@{js/matrix.js}"></script>
+<!--<script src="js/matrix.tables.js"></script>
+<script src="js/jquery.dataTables.min.js"></script>-->
+<script th:src="@{js/wysihtml5-0.3.0.js}"></script>
+<script th:src="@{js/bootstrap-wysihtml5.js}"></script>
+<script th:inline="javascript">
+    function loadPage(url,data,func) {
+        $("#content").load(url,data,func);
+    }
+
+    //$("select").select2();
+    function searchBt(this_){
+        loadPage([[${#httpServletRequest.getRequestURI()}]],{phone:$(this_).prev().val(),swipe:$("select[name=swipe]").val(),meetType:$("select[name=meetType]").val()});
+        //alert($(this_).prev().val())
+
+    }
+
+
+    // 对Date的扩展，将 Date 转化为指定格式的String
+    // 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符，
+    // 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字)
+    // 例子：
+    // (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423
+    // (new Date()).Format("yyyy-M-d h:m:s.S")   ==> 2006-7-2 8:9:4.18
+    Date.prototype.Format = function(fmt)
+    { //author: meizz
+        var o = {
+            "M+" : this.getMonth()+1,         //月份
+            "d+" : this.getDate(),          //日
+            "h+" : this.getHours(),          //小时
+            "m+" : this.getMinutes(),         //分
+            "s+" : this.getSeconds(),         //秒
+            "q+" : Math.floor((this.getMonth()+3)/3), //季度
+            "S" : this.getMilliseconds()       //毫秒
+        };
+        if(/(y+)/.test(fmt))
+            fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length));
+        for(var k in o)
+            if(new RegExp("("+ k +")").test(fmt))
+                fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length)));
+        return fmt;
+    }
+
+
+    $(document).ready(function() {
+//        var token = $("meta[name='_csrf']").attr("content");
+//        var header = $("meta[name='_csrf_header']").attr("content");
+
+        $(document).ajaxSend(function(e, xhr, options) {
+            //xhr.setRequestHeader(header, token);
+        });
+    });
+</script>
+</body>
+
+
+</html>
