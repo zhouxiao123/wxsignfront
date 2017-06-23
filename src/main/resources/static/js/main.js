@@ -104,7 +104,6 @@ function websocketstatus(status) {
 
 
 function startcode(){
-    vbar_backlight(true);
     vbar_beep(1);
     vbar_addtype("QRCODE");
     vbar_enable(true);
@@ -121,6 +120,25 @@ function closecode(){
     var myclose = document.getElementById("myclose");
     mystart.value = "开始读码";
     myclose.value = "已关闭读码";
+}
+
+function lighton(){
+    vbar_backlight(true);
+    vbar_beep(1);
+    var lighton = document.getElementById("lighton");
+    var lightoff = document.getElementById("lightoff");
+    lighton.value = "已开灯";
+    lightoff.value = "关灯";
+
+}
+
+function lightoff(){
+    vbar_backlight(false);
+    vbar_beep(1);
+    var lighton = document.getElementById("lighton");
+    var lightoff = document.getElementById("lightoff");
+    lighton.value = "开灯";
+    lightoff.value = "已关灯";
 }
 
 
