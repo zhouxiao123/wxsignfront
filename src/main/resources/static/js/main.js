@@ -105,25 +105,7 @@ function websocketstatus(status) {
 
 
 
-function startcode(){
-    vbar_backlight(true);
-    vbar_beep(1);
-    vbar_addtype("QRCODE");
-    vbar_enable(true);
-    var mystart = document.getElementById("mystart");
-    var myclose = document.getElementById("myclose");
-    mystart.value = "已开始读码";
-    myclose.value = "关闭读码";
 
-}
-
-function closecode(){
-    vbar_enable(false);
-    var mystart = document.getElementById("mystart");
-    var myclose = document.getElementById("myclose");
-    mystart.value = "开始读码";
-    myclose.value = "已关闭读码";
-}
 
 
 
