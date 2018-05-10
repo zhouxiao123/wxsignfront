@@ -4,7 +4,7 @@
     <title>扫码验证</title>
     <meta charset="utf-8"/>
     <link th:href="@{/css/type.css}" rel="stylesheet" type="text/css"/>
-    <!--<script th:src="@{/js/vbar.js}" type="text/javascript" ></script>-->
+    <script th:src="@{/js/vbar.js}" type="text/javascript" ></script>
     <script th:src="@{/js/main.js}" type="text/javascript" ></script>
     <script th:src="@{/js/jquery.min.js}" type="text/javascript" ></script>
 <!--    <link href="../static/css/type.css" rel="stylesheet" type="text/css"/>
@@ -17,13 +17,12 @@
 </div>
 <div class="body" style="text-align: center;margin-top: 20px">
     <div calss="box">
-        <!--<button id="connect" style="border-radius: 5px;font-size:15px;background: #77ff93;height:30px;width:60px;" onclick="connect();">连接</button><br />
+        <button id="connect" style="border-radius: 5px;font-size:15px;background: #77ff93;height:30px;width:60px;" onclick="connect();">连接</button><br />
         Websocket连接状态：<input type="text" value="未连接" style="font-size:15px;background-color: darkgrey;height:30px;"  id="wsocket"/><br />
         设备连接状态：<input type="text" value="未知" style="font-size:15px;background-color: darkgrey;height:30px;"  id="dev"/><br />
         解码结果：<br />
         <input type="button" id="mystart" value="开始读码" style="background: #77ff93" class="button" onclick="startcode()" />
-        <input type="button" id="myclose" value="关闭读码" style="background: #ff9ca9" class="button" onclick="closecode()" />-->
-        <input type="text" id="inputtext" style="width:500px;height:40px" autofocus="autofocus"  onkeypress="keypress(event)"  />
+        <input type="button" id="myclose" value="关闭读码" style="background: #ff9ca9" class="button" onclick="closecode()" />
         <div style="margin-top: 80px">
             <p style="font-size:24px;color:red" id="p0">请扫码</p>
             <p style="font-size:24px;color:red" id="p1"></p>
@@ -40,33 +39,4 @@
     <img src="images/load.gif" style="position:fixed;left:50%;top:50%;width:50px"/>
 </div>
 </body>
-<script>
-
-
-        var con = ''
-        /*function OnInput(event){
-            //console.log(event.target.value.charAt(event.target.value.length - 1))
-            console.log(event.target.value)
-            con = event.target.value
-            if (con.indexOf("\\r") >= 0) {
-                console.log(event.target.value)
-                //coderesult(con);
-            }
-
-        }*/
-        function keypress(event){
-            //console.log(event.target.value.charAt(event.target.value.length - 1))
-            var key = event.keyCode
-            if(key==13) {
-                coderesult(event.target.value)
-                $("#inputtext").val("")
-            }
-
-        }
-
-
-
-
-
-</script>
 </html>

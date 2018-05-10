@@ -34,6 +34,8 @@ function connect(){
     vbar_register_decode_callback(coderesult);
 }
 
+
+
 var tp0='';
 var tp1='';
 var tp2='';
@@ -49,9 +51,9 @@ function coderesult(sym){
 
 
 
-    vbar_beep(1);
+    //vbar_beep(1);
     $("#backg").show();
-    vbar_enable(false);
+    //vbar_enable(false);
     $.ajax({
         type: 'POST',
         url: 'qr_check',
@@ -77,7 +79,7 @@ function coderesult(sym){
             }
         }
     });
-    setTimeout("$('#backg').hide();document.getElementById('p0').innerHTML=tp0;document.getElementById('p1').innerHTML=tp1;document.getElementById('p2').innerHTML= tp2;document.getElementById('p3').innerHTML=tp3;vbar_enable(true)",500);
+    setTimeout("$('#backg').hide();document.getElementById('p0').innerHTML=tp0;document.getElementById('p1').innerHTML=tp1;document.getElementById('p2').innerHTML= tp2;document.getElementById('p3').innerHTML=tp3",500);
 
 }
 //设备状态
