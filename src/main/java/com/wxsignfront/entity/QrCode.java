@@ -51,6 +51,10 @@ public class QrCode {
     @Column(name="phone")
     private String phone;
 
+    //时间
+    @Column(name="year")
+    private String year;
+
 
     //刷卡时间
     @Column(name="swipetime")
@@ -63,6 +67,14 @@ public class QrCode {
     //会议方式1高招，2中招
     @Column(name="meettype")
     private Integer meetType;
+
+    public String getYear() {
+        return year;
+    }
+
+    public void setYear(String year) {
+        this.year = year;
+    }
 
     public Integer getPayType() {
         return payType;

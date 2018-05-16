@@ -50,6 +50,11 @@ public class QrCodeServiceImpl implements QrCodeService{
                             cb.like(r.<String>get("phone"), "%" + StringUtils.trim(qr.getPhone()) + "%")
                     );
                 }
+                if (StringUtils.isNotBlank(qr.getYear())) {
+                    predicate.getExpressions().add(
+                            cb.like(r.<String>get("year"), "%" + StringUtils.trim(qr.getYear()) + "%")
+                    );
+                }
                 if (qr.getPayPrice() !=null && qr.getPayPrice().intValue() >= 0) {
                     predicate.getExpressions().add(
                             cb.gt(r.<Float>get("payPrice"),qr.getPayPrice())

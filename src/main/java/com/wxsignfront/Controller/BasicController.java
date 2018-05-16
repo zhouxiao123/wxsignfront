@@ -107,12 +107,12 @@ public class BasicController {
      * @return 跳转到页面
      */
     @RequestMapping("/showQrCodeList")
-    public String showQrCodeList(Model model,HttpServletRequest request,@RequestParam(required = false) String phone,@RequestParam(required = false) Integer swipe,@RequestParam(required = false) Integer meetType) {
+    public String showQrCodeList(Model model,HttpServletRequest request,@RequestParam(required = false) String phone,@RequestParam(required = false) String year,@RequestParam(required = false) Integer swipe,@RequestParam(required = false) Integer meetType) {
         Pageable p = MyPageSupport.initPageSupport(request, Sort.Direction.DESC,"id");
         QrCode q = new QrCode();
         q.setStatus(1);
-        //大于20的，防止查出0.01元的
-        q.setPayPrice(20f);
+        //大于10的，防止查出0.01元的
+        q.setPayPrice(10f);
         if(meetType!=null && meetType.intValue() > 0) {
             q.setMeetType(meetType);
             model.addAttribute("meetType",meetType);
@@ -124,6 +124,11 @@ public class BasicController {
         if(!StringUtils.isEmpty(phone)) {
             q.setPhone(phone);
             model.addAttribute("phone",phone);
+        }
+        q.setYear("2018");
+        if(!StringUtils.isEmpty(year)) {
+            q.setYear(year);
+            model.addAttribute("year",year);
         }
         Page result = qrCodeService.queryQrCodeList(q,p);
         model.addAttribute("codeList",result.getContent());
