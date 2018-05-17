@@ -68,6 +68,21 @@ public class QrCode {
     @Column(name="meettype")
     private Integer meetType;
 
+    //买票张数
+    @Column(name="countnum")
+    private Integer countnum;
+
+
+
+
+    public Integer getCountnum() {
+        return countnum;
+    }
+
+    public void setCountnum(Integer countnum) {
+        this.countnum = countnum;
+    }
+
     public String getYear() {
         return year;
     }

@@ -76,6 +76,7 @@
                                 <th>使用情况</th>
                                 <th>使用时间</th>
                                 <th>购票类型</th>
+                                <th>购票数量</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -89,6 +90,7 @@
                                 <td th:text="${c.swipeTime==null?'未使用':'已使用'}" >讲座</td>
                                 <td th:text="${c.swipeTime}" >讲座</td>
                                 <td th:text="${c.meetType==1?'高招会':'中招会'}" >123456</td>
+                                <td th:text="${c.countnum}" >123456</td>
                             </tr>
                             </tbody>
                         </table>

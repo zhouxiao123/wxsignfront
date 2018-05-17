@@ -3,6 +3,8 @@ package com.wxsignfront.Controller;
 
 
 import com.wxsignfront.entity.QrCode;
+import com.wxsignfront.entity.QrCodeDetail;
+import com.wxsignfront.service.QrCodeDetailService;
 import com.wxsignfront.service.QrCodeService;
 import com.wxsignfront.util.MyPageSupport;
 import com.wxsignfront.util.QRCodeUtil;
@@ -45,6 +47,9 @@ public class BasicController {
     @Autowired
     private QrCodeService qrCodeService;
 
+    @Autowired
+    private QrCodeDetailService qrCodeDetailService;
+
     /**
      * 登跳转到首页面
      *
@@ -68,19 +73,21 @@ public class BasicController {
     public @ResponseBody
     Map<String, Object> qrCheck(HttpServletRequest request, Model model, @RequestParam String orderNumber) {
         Map<String, Object> map = new HashMap<>();
-        QrCode qc = qrCodeService.findQrCodeByOrderNumber(orderNumber);
-        if(qc == null)
+        //QrCode qc = qrCodeService.findQrCodeByOrderNumber(orderNumber);
+        QrCodeDetail qcd = qrCodeDetailService.findQrCodeDetailByCodenum(orderNumber);
+        if(qcd == null)
             map.put("result", -1);
-        else if(qc.getSwipeTime() != null) {
+        else if(qcd.getSwipeTime() != null) {
             map.put("result", 0);
-            map.put("qc", qc);
+            map.put("qcd", qcd);
         }
         else
         {
-            qc.setSwipeTime(new Date());
-            qrCodeService.saveQrCode(qc);
+            qcd.setSwipeTime(new Date());
+            //qrCodeService.saveQrCode(qc);
+            qrCodeDetailService.saveQrCodeDetail(qcd);
             map.put("result", 1);
-            map.put("qc", qc);
+            map.put("qcd", qcd);
         }
         return map;
     }

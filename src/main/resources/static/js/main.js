@@ -62,20 +62,20 @@ function coderesult(sym){
         async:false,
         success: function (data) {
             if (1 == data.result) {
-                tp0=data.qc.meetType==1?'高招门票':'中招门票';
+                tp0=data.qcd.qc.meetType==1?'高招门票':'中招门票';
                 tp1='扫码成功';
-                tp2='手机号: '+data.qc.phone;
-                tp3='购票价格: '+data.qc.payPrice;
+                tp2='手机号: '+data.qcd.qc.phone;
+                tp3='购票价格: '+data.qcd.price;
             } else if (-1 == data.result) {
                 tp0='不存在';
                 tp1='扫码失败';
                 tp2='该二维码不存在！';
                 tp3='';
             } else if (0 == data.result) {
-                tp0=data.qc.meetType==1?'高招门票':'中招门票';
+                tp0=data.qcd.qc.meetType==1?'高招门票':'中招门票';
                 tp1='扫码失败';
                 tp2= '该二维码已验证';
-                tp3='验证时间: '+(new Date(data.qc.swipeTime)).Format("yyyy-MM-dd hh:mm");
+                tp3='验证时间: '+(new Date(data.qcd.swipeTime)).Format("yyyy-MM-dd hh:mm");
             }
         }
     });
