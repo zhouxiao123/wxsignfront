@@ -44,10 +44,10 @@ var tp3='';
 function coderesult(sym){
     //document.getElementById('resultdecode').value=sym;
 	//console.log("1233");
-    document.getElementById('p0').innerHTML='处理中...';
+    /*document.getElementById('p0').innerHTML='处理中...';
     document.getElementById('p1').innerHTML='';
     document.getElementById('p2').innerHTML='';
-    document.getElementById('p3').innerHTML='';
+    document.getElementById('p3').innerHTML='';*/
 
 
 
@@ -61,25 +61,38 @@ function coderesult(sym){
         dataType: 'json',
         async:false,
         success: function (data) {
+            setTimeout("$('#backg').hide();",500);
             if (1 == data.result) {
-                tp0=data.qcd.qc.meetType==1?'高招门票':'中招门票';
+                /*tp0=data.qcd.qc.meetType==1?'高招门票':'中招门票';
                 tp1='扫码成功';
                 tp2='手机号: '+data.qcd.qc.phone;
-                tp3='购票价格: '+data.qcd.price;
+                tp3='购票价格: '+data.qcd.price;*/
+                $(".p").hide();
+                $("#p1").show();
+                $("#phone").text(data.qcd.qc.phone)
+                $("#price").text(data.qcd.price)
             } else if (-1 == data.result) {
-                tp0='不存在';
+                /*tp0='不存在';
                 tp1='扫码失败';
                 tp2='该二维码不存在！';
-                tp3='';
+                tp3='';*/
+                $(".p").hide();
+                $("#p3").show();
             } else if (0 == data.result) {
-                tp0=data.qcd.qc.meetType==1?'高招门票':'中招门票';
+                /*tp0=data.qcd.qc.meetType==1?'高招门票':'中招门票';
                 tp1='扫码失败';
                 tp2= '该二维码已验证';
-                tp3='验证时间: '+(new Date(data.qcd.swipeTime)).Format("yyyy-MM-dd hh:mm");
+                tp3='验证时间: '+(new Date(data.qcd.swipeTime)).Format("yyyy-MM-dd hh:mm");*/
+                $(".p").hide();
+                $("#p2").show();
+                $("#phone2").text(data.qcd.qc.phone)
+                $("#price2").text(data.qcd.price)
+                $("#ut").text((new Date(data.qcd.swipeTime)).Format("yyyy-MM-dd hh:mm"))
             }
+
         }
     });
-    setTimeout("$('#backg').hide();document.getElementById('p0').innerHTML=tp0;document.getElementById('p1').innerHTML=tp1;document.getElementById('p2').innerHTML= tp2;document.getElementById('p3').innerHTML=tp3",500);
+
 
 }
 //设备状态
