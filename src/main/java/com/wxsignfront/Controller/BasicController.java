@@ -124,10 +124,11 @@ public class BasicController {
             q.setMeetType(meetType);
             model.addAttribute("meetType",meetType);
         }
+
         if(swipe!=null && swipe.intValue() > 0) {
-            q.setCodeUrl(swipe.toString());
-            model.addAttribute("swipe",swipe);
+
         }
+        q.setPhone("");
         if(!StringUtils.isEmpty(phone)) {
             q.setPhone(phone);
             model.addAttribute("phone",phone);
@@ -137,7 +138,7 @@ public class BasicController {
             q.setYear(year);
             model.addAttribute("year",year);
         }
-        Page result = qrCodeService.queryQrCodeList(q,p);
+        Page result = qrCodeDetailService.queryQrCodeDetailList(q.getPhone(),q.getYear(),swipe,p);
         model.addAttribute("codeList",result.getContent());
         MyPageSupport.setPageSupport(model,result);
 
