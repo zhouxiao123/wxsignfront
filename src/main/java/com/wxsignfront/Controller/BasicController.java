@@ -63,6 +63,17 @@ public class BasicController {
         return "index";
     }
 
+    /**
+     * 登跳转到绵阳首页面
+     *
+     * @return 跳转到绵阳页面
+     */
+    @RequestMapping("/mianyang_index")
+    public String mianyang_index() {
+
+        return "mianyang_index";
+    }
+
 
     /**
      * 扫码时间更新
@@ -84,6 +95,7 @@ public class BasicController {
         else
         {
             qcd.setSwipeTime(new Date());
+            qcd.setSwipetype(1);
             //qrCodeService.saveQrCode(qc);
             qrCodeDetailService.saveQrCodeDetail(qcd);
             map.put("result", 1);
@@ -92,6 +104,36 @@ public class BasicController {
         return map;
     }
 
+
+
+    /**
+     * 绵阳扫码时间更新
+     *
+     * @return
+     */
+    @RequestMapping("/qr_check_my")
+    public @ResponseBody
+    Map<String, Object> qrCheckMy(HttpServletRequest request, Model model, @RequestParam String orderNumber) {
+        Map<String, Object> map = new HashMap<>();
+        //QrCode qc = qrCodeService.findQrCodeByOrderNumber(orderNumber);
+        QrCodeDetail qcd = qrCodeDetailService.findQrCodeDetailByCodenum(orderNumber);
+        if(qcd == null)
+            map.put("result", -1);
+        else if(qcd.getSwipeTime() != null) {
+            map.put("result", 0);
+            map.put("qcd", qcd);
+        }
+        else
+        {
+            qcd.setSwipeTime(new Date());
+            qcd.setSwipetype(2);
+            //qrCodeService.saveQrCode(qc);
+            qrCodeDetailService.saveQrCodeDetail(qcd);
+            map.put("result", 1);
+            map.put("qcd", qcd);
+        }
+        return map;
+    }
 
     /**
      * 生成二维码

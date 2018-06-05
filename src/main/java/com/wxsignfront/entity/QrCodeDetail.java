@@ -32,9 +32,19 @@ public class QrCodeDetail {
     @Column(name="swipetime")
     private Date swipeTime;
 
+    private Integer swipetype;
+
     @OneToOne
     @JoinColumn(name = "qrcodeid",referencedColumnName="id",insertable = false,updatable = false)
     private QrCode qc;
+
+    public Integer getSwipetype() {
+        return swipetype;
+    }
+
+    public void setSwipetype(Integer swipetype) {
+        this.swipetype = swipetype;
+    }
 
     public Long getId() {
         return id;

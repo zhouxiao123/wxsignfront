@@ -67,7 +67,7 @@
                         <table class="table table-bordered data-table">
                             <thead>
                             <tr>
-                                <th>openId</th>
+                                <th>来源</th>
                                 <th>订单号</th>
                                 <th>微信订单号</th>
                                 <th>支付金额</th>
@@ -81,7 +81,8 @@
                             </thead>
                             <tbody>
                             <tr  class="gradeX" th:each="c:${codeList}">
-                                <td th:text="${c.qc.openId}">01</td>
+                                <!--<td th:text="${c.qc.openId}">01</td>-->
+                                <td th:text="${c.qc.name=='1'?'小程序跳转':c.qc.name=='2'?'公众号菜单':c.qc.name=='3'?'微店':c.qc.name=='0'?'公众号文章':'其它'}" ></td>
                                 <td th:text="${c.codenum}" >周肖</td>
                                 <td th:text="${c.qc.payNumber}">123456</td>
                                 <td th:text="${c.price}"  class="center">3</td>

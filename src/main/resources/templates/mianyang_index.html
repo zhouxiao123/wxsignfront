@@ -23,7 +23,7 @@
         解码结果：<br />
         <input type="button" id="mystart" value="开始读码" style="background: #77ff93" class="button" onclick="startcode()" />
         <input type="button" id="myclose" value="关闭读码" style="background: #ff9ca9" class="button" onclick="closecode()" />-->
-        <div style="font-size:30px;margin-top:20px;margin-bottom: 20px;font-family:微软雅黑;color:#1ac6ac">成都咨询会</div>
+        <div style="font-size:30px;margin-top:20px;margin-bottom: 20px;font-family:微软雅黑;color:#1ac6ac">绵阳咨询会</div>
         <input type="text" id="inputtext" style="width:500px;height:40px;border-radius: 10px" autofocus="autofocus"  onkeypress="keypress(event)"  />
         <div id="p0" class="p" style="margin-top: 80px">
             <div style="font-size:30px;margin-top:20px;font-family:微软雅黑;color:#1ac6ac">请扫码</div>
@@ -86,7 +86,7 @@
             //console.log(event.target.value.charAt(event.target.value.length - 1))
             var key = event.keyCode
             if(key==13) {
-                coderesult(event.target.value)
+                coderesult_my(event.target.value)
                 $("#inputtext").val("")
             }
 
