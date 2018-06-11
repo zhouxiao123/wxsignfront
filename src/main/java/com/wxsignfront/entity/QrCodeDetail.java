@@ -34,9 +34,19 @@ public class QrCodeDetail {
 
     private Integer swipetype;
 
+    private Integer buytype;
+
     @OneToOne
     @JoinColumn(name = "qrcodeid",referencedColumnName="id",insertable = false,updatable = false)
     private QrCode qc;
+
+    public Integer getBuytype() {
+        return buytype;
+    }
+
+    public void setBuytype(Integer buytype) {
+        this.buytype = buytype;
+    }
 
     public Integer getSwipetype() {
         return swipetype;
